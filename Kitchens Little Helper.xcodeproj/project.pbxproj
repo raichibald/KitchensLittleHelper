@@ -3,27 +3,45 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		31B2D03FFDE54C81C5159EC6 /* Pods_Kitchens_Little_Helper.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 090E0E23747F4418955C7AB9 /* Pods_Kitchens_Little_Helper.framework */; };
+		B30716C32608C6E600D0AA87 /* CustomSegmentedControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = B30716C22608C6E600D0AA87 /* CustomSegmentedControl.swift */; };
+		B31DCC5C2600AB9600F7F1EB /* DryIngredientsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B31DCC5B2600AB9600F7F1EB /* DryIngredientsViewController.swift */; };
+		B31DCC5F2600ABAA00F7F1EB /* WetIngredientsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B31DCC5E2600ABAA00F7F1EB /* WetIngredientsViewController.swift */; };
+		B31DCC622600ABC200F7F1EB /* PanViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B31DCC612600ABC200F7F1EB /* PanViewController.swift */; };
+		B31DCC652600ABD000F7F1EB /* OvenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B31DCC642600ABD000F7F1EB /* OvenViewController.swift */; };
 		B36BB15D2600949700C21EF6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B36BB15C2600949700C21EF6 /* AppDelegate.swift */; };
 		B36BB15F2600949700C21EF6 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B36BB15E2600949700C21EF6 /* SceneDelegate.swift */; };
-		B36BB1612600949700C21EF6 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B36BB1602600949700C21EF6 /* ViewController.swift */; };
-		B36BB1642600949700C21EF6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B36BB1622600949700C21EF6 /* Main.storyboard */; };
+		B36BB1612600949700C21EF6 /* RootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B36BB1602600949700C21EF6 /* RootViewController.swift */; };
 		B36BB1662600949800C21EF6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B36BB1652600949800C21EF6 /* Assets.xcassets */; };
 		B36BB1692600949800C21EF6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B36BB1672600949800C21EF6 /* LaunchScreen.storyboard */; };
+		B393BB832604D61100783EA1 /* ConversionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B393BB822604D61100783EA1 /* ConversionViewController.swift */; };
+		B393BB862604D76A00783EA1 /* CustomPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B393BB852604D76A00783EA1 /* CustomPageViewController.swift */; };
+		B3C9E894260A19B80063FC0D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B3C9E893260A19B80063FC0D /* Main.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		090E0E23747F4418955C7AB9 /* Pods_Kitchens_Little_Helper.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Kitchens_Little_Helper.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		339396EA5FD5A43C54C38580 /* Pods-Kitchens Little Helper.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Kitchens Little Helper.debug.xcconfig"; path = "Target Support Files/Pods-Kitchens Little Helper/Pods-Kitchens Little Helper.debug.xcconfig"; sourceTree = "<group>"; };
+		B30716C22608C6E600D0AA87 /* CustomSegmentedControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomSegmentedControl.swift; sourceTree = "<group>"; };
+		B31DCC5B2600AB9600F7F1EB /* DryIngredientsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DryIngredientsViewController.swift; sourceTree = "<group>"; };
+		B31DCC5E2600ABAA00F7F1EB /* WetIngredientsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WetIngredientsViewController.swift; sourceTree = "<group>"; };
+		B31DCC612600ABC200F7F1EB /* PanViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PanViewController.swift; sourceTree = "<group>"; };
+		B31DCC642600ABD000F7F1EB /* OvenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OvenViewController.swift; sourceTree = "<group>"; };
 		B36BB1592600949700C21EF6 /* Kitchens Little Helper.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Kitchens Little Helper.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B36BB15C2600949700C21EF6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B36BB15E2600949700C21EF6 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		B36BB1602600949700C21EF6 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		B36BB1632600949700C21EF6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		B36BB1602600949700C21EF6 /* RootViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootViewController.swift; sourceTree = "<group>"; };
 		B36BB1652600949800C21EF6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B36BB1682600949800C21EF6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B36BB16A2600949800C21EF6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B393BB822604D61100783EA1 /* ConversionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConversionViewController.swift; sourceTree = "<group>"; };
+		B393BB852604D76A00783EA1 /* CustomPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomPageViewController.swift; sourceTree = "<group>"; };
+		B3C9E893260A19B80063FC0D /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		FF2F9521CCA655C1C4336072 /* Pods-Kitchens Little Helper.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Kitchens Little Helper.release.xcconfig"; path = "Target Support Files/Pods-Kitchens Little Helper/Pods-Kitchens Little Helper.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,17 +49,38 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				31B2D03FFDE54C81C5159EC6 /* Pods_Kitchens_Little_Helper.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		51567B8A377833773ADDBA6B /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				339396EA5FD5A43C54C38580 /* Pods-Kitchens Little Helper.debug.xcconfig */,
+				FF2F9521CCA655C1C4336072 /* Pods-Kitchens Little Helper.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		B30716C12608C6C400D0AA87 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				B36BB1652600949800C21EF6 /* Assets.xcassets */,
+				B30716C22608C6E600D0AA87 /* CustomSegmentedControl.swift */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
 		B36BB1502600949600C21EF6 = {
 			isa = PBXGroup;
 			children = (
 				B36BB15B2600949700C21EF6 /* Kitchens Little Helper */,
 				B36BB15A2600949700C21EF6 /* Products */,
+				51567B8A377833773ADDBA6B /* Pods */,
+				FD3BFE7CBCD2A2DE82998E28 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -58,13 +97,27 @@
 			children = (
 				B36BB15C2600949700C21EF6 /* AppDelegate.swift */,
 				B36BB15E2600949700C21EF6 /* SceneDelegate.swift */,
-				B36BB1602600949700C21EF6 /* ViewController.swift */,
-				B36BB1622600949700C21EF6 /* Main.storyboard */,
-				B36BB1652600949800C21EF6 /* Assets.xcassets */,
+				B36BB1602600949700C21EF6 /* RootViewController.swift */,
+				B31DCC5B2600AB9600F7F1EB /* DryIngredientsViewController.swift */,
+				B31DCC5E2600ABAA00F7F1EB /* WetIngredientsViewController.swift */,
+				B31DCC612600ABC200F7F1EB /* PanViewController.swift */,
+				B31DCC642600ABD000F7F1EB /* OvenViewController.swift */,
+				B30716C12608C6C400D0AA87 /* Resources */,
 				B36BB1672600949800C21EF6 /* LaunchScreen.storyboard */,
 				B36BB16A2600949800C21EF6 /* Info.plist */,
+				B393BB822604D61100783EA1 /* ConversionViewController.swift */,
+				B393BB852604D76A00783EA1 /* CustomPageViewController.swift */,
+				B3C9E893260A19B80063FC0D /* Main.storyboard */,
 			);
 			path = "Kitchens Little Helper";
+			sourceTree = "<group>";
+		};
+		FD3BFE7CBCD2A2DE82998E28 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				090E0E23747F4418955C7AB9 /* Pods_Kitchens_Little_Helper.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -74,9 +127,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = B36BB16D2600949800C21EF6 /* Build configuration list for PBXNativeTarget "Kitchens Little Helper" */;
 			buildPhases = (
+				1997BC89BE81B94201E0D2BC /* [CP] Check Pods Manifest.lock */,
 				B36BB1552600949700C21EF6 /* Sources */,
 				B36BB1562600949700C21EF6 /* Frameworks */,
 				B36BB1572600949700C21EF6 /* Resources */,
+				845AAA679FA52E6FF177CBE3 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -124,36 +179,77 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B3C9E894260A19B80063FC0D /* Main.storyboard in Resources */,
 				B36BB1692600949800C21EF6 /* LaunchScreen.storyboard in Resources */,
 				B36BB1662600949800C21EF6 /* Assets.xcassets in Resources */,
-				B36BB1642600949700C21EF6 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		1997BC89BE81B94201E0D2BC /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Kitchens Little Helper-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		845AAA679FA52E6FF177CBE3 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Kitchens Little Helper/Pods-Kitchens Little Helper-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Kitchens Little Helper/Pods-Kitchens Little Helper-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Kitchens Little Helper/Pods-Kitchens Little Helper-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		B36BB1552600949700C21EF6 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B36BB1612600949700C21EF6 /* ViewController.swift in Sources */,
+				B31DCC5F2600ABAA00F7F1EB /* WetIngredientsViewController.swift in Sources */,
+				B36BB1612600949700C21EF6 /* RootViewController.swift in Sources */,
+				B31DCC652600ABD000F7F1EB /* OvenViewController.swift in Sources */,
+				B30716C32608C6E600D0AA87 /* CustomSegmentedControl.swift in Sources */,
+				B31DCC622600ABC200F7F1EB /* PanViewController.swift in Sources */,
+				B31DCC5C2600AB9600F7F1EB /* DryIngredientsViewController.swift in Sources */,
 				B36BB15D2600949700C21EF6 /* AppDelegate.swift in Sources */,
+				B393BB832604D61100783EA1 /* ConversionViewController.swift in Sources */,
 				B36BB15F2600949700C21EF6 /* SceneDelegate.swift in Sources */,
+				B393BB862604D76A00783EA1 /* CustomPageViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		B36BB1622600949700C21EF6 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				B36BB1632600949700C21EF6 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		B36BB1672600949800C21EF6 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -283,6 +379,7 @@
 		};
 		B36BB16E2600949800C21EF6 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 339396EA5FD5A43C54C38580 /* Pods-Kitchens Little Helper.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -303,6 +400,7 @@
 		};
 		B36BB16F2600949800C21EF6 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = FF2F9521CCA655C1C4336072 /* Pods-Kitchens Little Helper.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;

@@ -1,0 +1,16 @@
+PODS:
+  - SwiftyMenuBar (0.1.1)
+
+DEPENDENCIES:
+  - SwiftyMenuBar
+
+SPEC REPOS:
+  trunk:
+    - SwiftyMenuBar
+
+SPEC CHECKSUMS:
+  SwiftyMenuBar: f09e1b9c98ba7b2f5677a94d4cf327eb3287d5a8
+
+PODFILE CHECKSUM: 07eda33bb5d701217da3a144750efb5efc78af6b
+
+COCOAPODS: 1.10.1

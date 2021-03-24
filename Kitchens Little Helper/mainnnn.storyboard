@@ -1,0 +1,287 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="ITd-od-l3T">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Dry Ingredients View Controller-->
+        <scene sceneID="9dk-Kx-DdJ">
+            <objects>
+                <viewController storyboardIdentifier="DryIngredientsViewController" id="Oal-yJ-cef" customClass="DryIngredientsViewController" customModule="Kitchens_Little_Helper" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="grJ-EY-L9N">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="4ro-Iy-PGx">
+                                <rect key="frame" x="148" y="433" width="118" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </slider>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TZu-lm-Nhg">
+                                <rect key="frame" x="186" y="404" width="42" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="icons8-change-90" translatesAutoresizingMaskIntoConstraints="NO" id="Ol8-ip-Yvd">
+                                <rect key="frame" x="87" y="384" width="240" height="128"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="WUE-Ft-Equ"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <connections>
+                        <outlet property="label" destination="TZu-lm-Nhg" id="0Nw-lr-Zb3"/>
+                        <outlet property="slider" destination="4ro-Iy-PGx" id="jad-kD-dpW"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gA4-vd-hSu" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-3368" y="1315"/>
+        </scene>
+        <!--Wet Ingredients View Controller-->
+        <scene sceneID="lmh-wa-q76">
+            <objects>
+                <viewController storyboardIdentifier="WetIngredientsViewController" id="LDg-sL-Cqf" customClass="WetIngredientsViewController" customModule="Kitchens_Little_Helper" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="lXR-KD-s13">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" maximumValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="s8A-AT-YgN">
+                                <rect key="frame" x="160" y="432" width="94" height="32"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </stepper>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="nBe-Ut-r7f"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="mSx-nJ-5Jr" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-2647" y="1324"/>
+        </scene>
+        <!--Pan View Controller-->
+        <scene sceneID="qYI-0t-mbs">
+            <objects>
+                <viewController storyboardIdentifier="PanViewController" id="cRu-iq-ImV" customClass="PanViewController" customModule="Kitchens_Little_Helper" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ggE-lp-f7E">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="qJp-rx-p93"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="xah-5S-uJV" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1895" y="1343"/>
+        </scene>
+        <!--Oven View Controller-->
+        <scene sceneID="uBh-bS-CIW">
+            <objects>
+                <viewController storyboardIdentifier="OvenViewController" id="SSw-mX-AGR" customClass="OvenViewController" customModule="Kitchens_Little_Helper" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="bdI-Gc-5us">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="IlJ-7R-Ubx"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="bFN-6N-gX8" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1276" y="1331"/>
+        </scene>
+        <!--Custom Page View Controller-->
+        <scene sceneID="aU4-ED-HTG">
+            <objects>
+                <pageViewController restorationIdentifier="CustomPageViewController" storyboardIdentifier="CustomPageViewController" autoresizesArchivedViewToFullSize="NO" transitionStyle="scroll" navigationOrientation="horizontal" spineLocation="none" id="UBB-r5-cQq" customClass="CustomPageViewController" customModule="Kitchens_Little_Helper" customModuleProvider="target" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="qTu-1t-l1V" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1029" y="692"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="Goa-nk-jLa">
+            <objects>
+                <viewController id="7RF-4L-nr2" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="TrY-9T-Lkz">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="yEg-gc-KBT"/>
+                        <color key="backgroundColor" systemColor="systemIndigoColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="1Y1-Tw-DIj"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="9e2-b4-V2v" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-278" y="692"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="kwm-Bh-eA5">
+            <objects>
+                <viewController id="8XH-3n-UAo" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="IBe-sc-Vy4">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="jO7-yZ-eOR"/>
+                        <color key="backgroundColor" systemColor="systemGreenColor"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="" image="icons8-fridge-90" id="cEv-vm-WCz"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="BAK-mX-UuP" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="510" y="11"/>
+        </scene>
+        <!--Conversion View Controller-->
+        <scene sceneID="UgJ-23-Etg">
+            <objects>
+                <viewController storyboardIdentifier="ConversionViewController" id="klA-QV-Loa" customClass="ConversionViewController" customModule="Kitchens_Little_Helper" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ehk-gf-fg2">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Oqb-Ik-n6K">
+                                <rect key="frame" x="186" y="437.5" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="cJD-lR-cdA"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Oqb-Ik-n6K" firstAttribute="centerY" secondItem="ehk-gf-fg2" secondAttribute="centerY" id="ey3-jC-fpF"/>
+                            <constraint firstItem="Oqb-Ik-n6K" firstAttribute="centerX" secondItem="ehk-gf-fg2" secondAttribute="centerX" id="lGF-i4-f3O"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="displayLabel" destination="Oqb-Ik-n6K" id="bUr-hF-h2H"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="JVX-on-IU8" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1894" y="271"/>
+        </scene>
+        <!--Root View Controller-->
+        <scene sceneID="d9p-wU-Fom">
+            <objects>
+                <viewController id="Sex-lx-ae6" customClass="RootViewController" customModule="Kitchens_Little_Helper" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="u4j-F7-BME">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="YpU-sC-x3F" customClass="CustomSegmentedControl" customModule="Kitchens_Little_Helper" customModuleProvider="target">
+                                <rect key="frame" x="20" y="64" width="374" height="30"/>
+                                <color key="backgroundColor" systemColor="systemGray5Color"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                        <real key="value" value="1"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                        <color key="value" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="commaSeparatedButtonImageNames" value="dry,wet,pan,temperature"/>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="buttonImageColor">
+                                        <color key="value" systemColor="systemGrayColor"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="selectorImageTintColor">
+                                        <color key="value" red="0.78039215689999997" green="0.17254901959999999" blue="0.25490196079999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="isHighlighted" value="NO"/>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="adjustsImageWhenHighlighted" value="NO"/>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="buttonHiglighted" value="NO"/>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="buttonHighlighted" value="NO"/>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" pagingEnabled="YES" translatesAutoresizingMaskIntoConstraints="NO" id="4nt-zc-G3E">
+                                <rect key="frame" x="0.0" y="119" width="414" height="609"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <viewLayoutGuide key="contentLayoutGuide" id="Rsu-oc-Agl"/>
+                                <viewLayoutGuide key="frameLayoutGuide" id="QVJ-lD-Ake"/>
+                            </scrollView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="o5I-t8-yfU"/>
+                        <color key="backgroundColor" systemColor="systemYellowColor"/>
+                        <constraints>
+                            <constraint firstItem="o5I-t8-yfU" firstAttribute="trailing" secondItem="YpU-sC-x3F" secondAttribute="trailing" constant="20" id="6lt-cd-gc4"/>
+                            <constraint firstItem="YpU-sC-x3F" firstAttribute="top" secondItem="o5I-t8-yfU" secondAttribute="top" constant="20" id="Wbx-XN-h46"/>
+                            <constraint firstItem="YpU-sC-x3F" firstAttribute="leading" secondItem="o5I-t8-yfU" secondAttribute="leading" constant="20" id="nxf-ea-2l6"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="" image="icons8-replace-90" id="fhD-L3-j94"/>
+                    <connections>
+                        <outlet property="contentScrollView" destination="4nt-zc-G3E" id="p9Y-Jt-cbt"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="IH6-nS-VzP" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1030.4347826086957" y="10.714285714285714"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="aeY-Rh-wqB">
+            <objects>
+                <tabBarController id="ITd-od-l3T" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="olJ-88-R3X">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="Sex-lx-ae6" kind="relationship" relationship="viewControllers" id="CwC-iY-t1Q"/>
+                        <segue destination="H6m-we-3De" kind="relationship" relationship="viewControllers" id="pBO-SL-2nv"/>
+                        <segue destination="8XH-3n-UAo" kind="relationship" relationship="viewControllers" id="nkB-ln-HTB"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="v7w-1f-TYx" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-197" y="-735"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="WcH-qS-4a9">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="H6m-we-3De" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="" image="icons8-check-file-90" id="C9g-or-c9K"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="v92-O0-ery">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="7RF-4L-nr2" kind="relationship" relationship="rootViewController" id="ny4-Gf-Kkk"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="CVc-UF-rK8" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-278.26086956521743" y="10.714285714285714"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="icons8-change-90" width="30" height="30"/>
+        <image name="icons8-check-file-90" width="30" height="30"/>
+        <image name="icons8-fridge-90" width="30" height="30"/>
+        <image name="icons8-replace-90" width="30" height="30"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGray5Color">
+            <color red="0.89803921568627454" green="0.89803921568627454" blue="0.91764705882352937" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemGrayColor">
+            <color red="0.55686274509803924" green="0.55686274509803924" blue="0.57647058823529407" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemGreenColor">
+            <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemIndigoColor">
+            <color red="0.34509803921568627" green="0.33725490196078434" blue="0.83921568627450982" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemYellowColor">
+            <color red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>

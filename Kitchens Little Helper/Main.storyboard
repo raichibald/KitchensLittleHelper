@@ -1,0 +1,234 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="CFg-Hd-nGk">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Custom Page View Controller-->
+        <scene sceneID="Epz-e8-UUO">
+            <objects>
+                <pageViewController restorationIdentifier="CustomPageViewController" storyboardIdentifier="CustomPageViewController" autoresizesArchivedViewToFullSize="NO" transitionStyle="scroll" navigationOrientation="horizontal" spineLocation="none" id="7Z2-Nc-g2g" customClass="CustomPageViewController" customModule="Kitchens_Little_Helper" customModuleProvider="target" sceneMemberID="viewController">
+                    <connections>
+                        <segue destination="V4E-MC-o9g" kind="show" identifier="goToDryVC" id="vbk-Xm-s8o"/>
+                        <segue destination="3vx-wp-2cj" kind="show" identifier="goToWetVC" id="D7a-U8-cWm"/>
+                        <segue destination="PV1-Uf-Ftc" kind="show" identifier="goToPanVC" id="SM5-mz-oMX"/>
+                        <segue destination="q8M-No-9CJ" kind="show" identifier="goToOvenVC" id="FSm-yQ-GoW"/>
+                    </connections>
+                </pageViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="zQA-NO-5ug" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-904" y="785"/>
+        </scene>
+        <!--Pan View Controller-->
+        <scene sceneID="tmW-Ax-q6M">
+            <objects>
+                <viewController storyboardIdentifier="PanViewController" id="PV1-Uf-Ftc" customClass="PanViewController" customModule="Kitchens_Little_Helper" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Eno-yt-BEV">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="560"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="kbD-mx-j2P"/>
+                        <color key="backgroundColor" systemColor="systemIndigoColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="82m-7j-6dC"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="F4g-AJ-eDA" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1991" y="1454"/>
+        </scene>
+        <!--Oven View Controller-->
+        <scene sceneID="pUC-S2-lh7">
+            <objects>
+                <viewController storyboardIdentifier="OvenViewController" id="q8M-No-9CJ" customClass="OvenViewController" customModule="Kitchens_Little_Helper" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Yox-Lx-Eeg">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="560"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="WjZ-UB-qZX"/>
+                        <color key="backgroundColor" systemColor="systemPurpleColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="uGa-Ut-1mm"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="EUh-xy-S1p" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1991" y="2139"/>
+        </scene>
+        <!--Dry Ingredients View Controller-->
+        <scene sceneID="fQq-3k-CzL">
+            <objects>
+                <viewController storyboardIdentifier="DryIngredientsViewController" id="V4E-MC-o9g" customClass="DryIngredientsViewController" customModule="Kitchens_Little_Helper" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="OFA-xx-Xyb">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="560"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mFw-XQ-fXp">
+                                <rect key="frame" x="0.0" y="20" width="414" height="70"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="70" id="jwF-Dk-gao"/>
+                                </constraints>
+                            </pickerView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="Hfi-Ix-Zgg"/>
+                        <color key="backgroundColor" systemColor="systemOrangeColor"/>
+                        <constraints>
+                            <constraint firstItem="mFw-XQ-fXp" firstAttribute="top" secondItem="Hfi-Ix-Zgg" secondAttribute="top" constant="20" id="Ips-Qx-9fL"/>
+                            <constraint firstItem="mFw-XQ-fXp" firstAttribute="trailing" secondItem="Hfi-Ix-Zgg" secondAttribute="trailing" id="Rcd-P3-LEU"/>
+                            <constraint firstItem="mFw-XQ-fXp" firstAttribute="leading" secondItem="Hfi-Ix-Zgg" secondAttribute="leading" id="YVO-me-U8q"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="hk6-Tp-bTt"/>
+                    <connections>
+                        <outlet property="pickerViewOne" destination="mFw-XQ-fXp" id="79a-AX-KhD"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="WzX-S8-TQA" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1991" y="104"/>
+        </scene>
+        <!--Wet Ingredients View Controller-->
+        <scene sceneID="KAQ-pS-sKX">
+            <objects>
+                <viewController storyboardIdentifier="WetIngredientsViewController" id="3vx-wp-2cj" customClass="WetIngredientsViewController" customModule="Kitchens_Little_Helper" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Zmn-Ll-a6v">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="560"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="Is0-8B-eqq"/>
+                        <color key="backgroundColor" systemColor="systemGreenColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="62g-8S-3pK"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="R0j-H0-iNF" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1991" y="785"/>
+        </scene>
+        <!--Root View Controller-->
+        <scene sceneID="kUE-F6-Whx">
+            <objects>
+                <viewController id="dea-o4-YQp" customClass="RootViewController" customModule="Kitchens_Little_Helper" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="SsN-Rr-n61">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wHs-Yv-3hn" customClass="CustomSegmentedControl" customModule="Kitchens_Little_Helper" customModuleProvider="target">
+                                <rect key="frame" x="20" y="49" width="374" height="50"/>
+                                <color key="backgroundColor" systemColor="systemGray4Color"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="9KT-7x-9nT"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                        <real key="value" value="1"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="commaSeparatedButtonImageNames" value="dry,wet,pan,temperature"/>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="buttonImageColor">
+                                        <color key="value" systemColor="systemGrayColor"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="selectorColor">
+                                        <color key="value" red="0.96078431369999995" green="0.96078431369999995" blue="0.96078431369999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="selectorImageTintColor">
+                                        <color key="value" red="1" green="0.35914012750000002" blue="0.27065358169999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="segmentButtonPressed:" destination="dea-o4-YQp" eventType="valueChanged" id="B88-bH-D14"/>
+                                </connections>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0QE-cj-SXJ">
+                                <rect key="frame" x="184" y="758" width="46" height="30"/>
+                                <state key="normal" title="Button"/>
+                            </button>
+                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="H9Q-R7-Xyx">
+                                <rect key="frame" x="0.0" y="119" width="414" height="614"/>
+                                <connections>
+                                    <segue destination="7Z2-Nc-g2g" kind="embed" identifier="customPageVCSegue" id="qab-qP-DxS"/>
+                                </connections>
+                            </containerView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="Qrd-uA-aXS"/>
+                        <color key="backgroundColor" systemColor="systemYellowColor"/>
+                        <constraints>
+                            <constraint firstItem="0QE-cj-SXJ" firstAttribute="centerX" secondItem="SsN-Rr-n61" secondAttribute="centerX" id="D5j-7Y-lj7"/>
+                            <constraint firstItem="Qrd-uA-aXS" firstAttribute="bottom" secondItem="0QE-cj-SXJ" secondAttribute="bottom" constant="25" id="IpT-NA-2GI"/>
+                            <constraint firstItem="Qrd-uA-aXS" firstAttribute="trailing" secondItem="wHs-Yv-3hn" secondAttribute="trailing" constant="20" id="Yfb-wq-E2V"/>
+                            <constraint firstItem="Qrd-uA-aXS" firstAttribute="trailing" secondItem="H9Q-R7-Xyx" secondAttribute="trailing" id="j2a-2S-z2C"/>
+                            <constraint firstItem="0QE-cj-SXJ" firstAttribute="top" secondItem="H9Q-R7-Xyx" secondAttribute="bottom" constant="25" id="mfE-nF-7gX"/>
+                            <constraint firstItem="H9Q-R7-Xyx" firstAttribute="leading" secondItem="Qrd-uA-aXS" secondAttribute="leading" id="oVe-QQ-JOk"/>
+                            <constraint firstItem="H9Q-R7-Xyx" firstAttribute="top" secondItem="wHs-Yv-3hn" secondAttribute="bottom" constant="20" id="s9S-qc-VOM"/>
+                            <constraint firstItem="wHs-Yv-3hn" firstAttribute="top" secondItem="Qrd-uA-aXS" secondAttribute="top" constant="5" id="vdq-Z5-m2D"/>
+                            <constraint firstItem="wHs-Yv-3hn" firstAttribute="leading" secondItem="Qrd-uA-aXS" secondAttribute="leading" constant="20" id="wYO-xc-mRD"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="" image="icons8-replace-90" id="6Mt-bo-OFM"/>
+                    <connections>
+                        <outlet property="segmentedControl" destination="wHs-Yv-3hn" id="qcD-UC-rIq"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="bsn-gi-3Aw" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-904.34782608695662" y="103.79464285714285"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="oyj-sg-Wnu">
+            <objects>
+                <viewController id="k3E-Qd-NtP" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Spf-e5-VIQ">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="tsn-tN-dBm"/>
+                        <color key="backgroundColor" systemColor="systemIndigoColor"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="" image="icons8-check-file-90" id="yxA-ST-wZa"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="LUy-8G-Xcj" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-148" y="104"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="xvL-K7-bLn">
+            <objects>
+                <tabBarController id="CFg-Hd-nGk" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="SRj-Nd-8Cp">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="dea-o4-YQp" kind="relationship" relationship="viewControllers" id="ceZ-KR-UZP"/>
+                        <segue destination="k3E-Qd-NtP" kind="relationship" relationship="viewControllers" id="5kN-v2-tzD"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="1lA-0i-XIb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-529" y="-633"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="icons8-check-file-90" width="30" height="30"/>
+        <image name="icons8-replace-90" width="30" height="30"/>
+        <systemColor name="systemGray4Color">
+            <color red="0.81960784313725488" green="0.81960784313725488" blue="0.83921568627450982" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemGrayColor">
+            <color red="0.55686274509803924" green="0.55686274509803924" blue="0.57647058823529407" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemGreenColor">
+            <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemIndigoColor">
+            <color red="0.34509803921568627" green="0.33725490196078434" blue="0.83921568627450982" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemOrangeColor">
+            <color red="1" green="0.58431372549019611" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemPurpleColor">
+            <color red="0.68627450980392157" green="0.32156862745098042" blue="0.87058823529411766" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemYellowColor">
+            <color red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
