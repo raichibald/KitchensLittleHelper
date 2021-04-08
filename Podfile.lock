@@ -1,16 +1,20 @@
 PODS:
-  - SwiftyMenuBar (0.1.1)
+  - AnimatableReload (0.2.0)
+  - BetterSegmentedControl (2.0.1)
 
 DEPENDENCIES:
-  - SwiftyMenuBar
+  - AnimatableReload
+  - BetterSegmentedControl (~> 2.0)
 
 SPEC REPOS:
   trunk:
-    - SwiftyMenuBar
+    - AnimatableReload
+    - BetterSegmentedControl
 
 SPEC CHECKSUMS:
-  SwiftyMenuBar: f09e1b9c98ba7b2f5677a94d4cf327eb3287d5a8
+  AnimatableReload: 9576d3019bfb103f76b5f37fa6f8915bd8307527
+  BetterSegmentedControl: 09607b27861d49cbce48b7673b74f9150a3d371a
 
-PODFILE CHECKSUM: 07eda33bb5d701217da3a144750efb5efc78af6b
+PODFILE CHECKSUM: 4b3291c7e2ee994bf2cce778fd97950d21b49fb9
 
 COCOAPODS: 1.10.1

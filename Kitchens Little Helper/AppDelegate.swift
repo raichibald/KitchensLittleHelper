@@ -15,8 +15,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         
         //Customizing Tab Bar Appearance
-        UITabBar.appearance().barTintColor = .black
-        UITabBar.appearance().tintColor = .systemYellow
+        UITabBar.appearance().barTintColor = UIColor(named: "darkWhite")!
+        UITabBar.appearance().tintColor = UIColor(named: "warmRed")!
+
         
         //Customizing PageView indicators
         let pageControl = UIPageControl.appearance()

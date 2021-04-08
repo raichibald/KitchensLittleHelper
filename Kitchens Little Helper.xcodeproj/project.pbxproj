@@ -9,6 +9,13 @@
 /* Begin PBXBuildFile section */
 		31B2D03FFDE54C81C5159EC6 /* Pods_Kitchens_Little_Helper.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 090E0E23747F4418955C7AB9 /* Pods_Kitchens_Little_Helper.framework */; };
 		B30716C32608C6E600D0AA87 /* CustomSegmentedControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = B30716C22608C6E600D0AA87 /* CustomSegmentedControl.swift */; };
+		B30A17EC260C9E9A0049E1D0 /* UnitView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B30A17EB260C9E9A0049E1D0 /* UnitView.swift */; };
+		B30A17EF260CC8AD0049E1D0 /* UnitCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B30A17EE260CC8AD0049E1D0 /* UnitCollectionViewCell.swift */; };
+		B30BB087261E173B008E88D8 /* Converter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B30BB086261E173B008E88D8 /* Converter.swift */; };
+		B30BB08B261E1765008E88D8 /* ConverterManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B30BB08A261E1765008E88D8 /* ConverterManager.swift */; };
+		B30BB08E261E2426008E88D8 /* Protocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = B30BB08D261E2426008E88D8 /* Protocols.swift */; };
+		B319D470260DE0EC00245F3A /* SwitchButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = B319D46F260DE0EC00245F3A /* SwitchButton.swift */; };
+		B319D473260E257200245F3A /* ConvertButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = B319D472260E257200245F3A /* ConvertButton.swift */; };
 		B31DCC5C2600AB9600F7F1EB /* DryIngredientsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B31DCC5B2600AB9600F7F1EB /* DryIngredientsViewController.swift */; };
 		B31DCC5F2600ABAA00F7F1EB /* WetIngredientsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B31DCC5E2600ABAA00F7F1EB /* WetIngredientsViewController.swift */; };
 		B31DCC622600ABC200F7F1EB /* PanViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B31DCC612600ABC200F7F1EB /* PanViewController.swift */; };
@@ -20,13 +27,23 @@
 		B36BB1692600949800C21EF6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B36BB1672600949800C21EF6 /* LaunchScreen.storyboard */; };
 		B393BB832604D61100783EA1 /* ConversionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B393BB822604D61100783EA1 /* ConversionViewController.swift */; };
 		B393BB862604D76A00783EA1 /* CustomPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B393BB852604D76A00783EA1 /* CustomPageViewController.swift */; };
+		B39A2E372615CEFF00D4954B /* UITextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = B39A2E362615CEFF00D4954B /* UITextField.swift */; };
+		B39A2E3A2615D39000D4954B /* UIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B39A2E392615D39000D4954B /* UIViewController.swift */; };
 		B3C9E894260A19B80063FC0D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B3C9E893260A19B80063FC0D /* Main.storyboard */; };
+		B3E495A3261DDA8800CD6EAF /* ResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3E495A2261DDA8800CD6EAF /* ResultViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		090E0E23747F4418955C7AB9 /* Pods_Kitchens_Little_Helper.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Kitchens_Little_Helper.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		339396EA5FD5A43C54C38580 /* Pods-Kitchens Little Helper.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Kitchens Little Helper.debug.xcconfig"; path = "Target Support Files/Pods-Kitchens Little Helper/Pods-Kitchens Little Helper.debug.xcconfig"; sourceTree = "<group>"; };
 		B30716C22608C6E600D0AA87 /* CustomSegmentedControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomSegmentedControl.swift; sourceTree = "<group>"; };
+		B30A17EB260C9E9A0049E1D0 /* UnitView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnitView.swift; sourceTree = "<group>"; };
+		B30A17EE260CC8AD0049E1D0 /* UnitCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnitCollectionViewCell.swift; sourceTree = "<group>"; };
+		B30BB086261E173B008E88D8 /* Converter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Converter.swift; sourceTree = "<group>"; };
+		B30BB08A261E1765008E88D8 /* ConverterManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConverterManager.swift; sourceTree = "<group>"; };
+		B30BB08D261E2426008E88D8 /* Protocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Protocols.swift; sourceTree = "<group>"; };
+		B319D46F260DE0EC00245F3A /* SwitchButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwitchButton.swift; sourceTree = "<group>"; };
+		B319D472260E257200245F3A /* ConvertButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConvertButton.swift; sourceTree = "<group>"; };
 		B31DCC5B2600AB9600F7F1EB /* DryIngredientsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DryIngredientsViewController.swift; sourceTree = "<group>"; };
 		B31DCC5E2600ABAA00F7F1EB /* WetIngredientsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WetIngredientsViewController.swift; sourceTree = "<group>"; };
 		B31DCC612600ABC200F7F1EB /* PanViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PanViewController.swift; sourceTree = "<group>"; };
@@ -40,7 +57,10 @@
 		B36BB16A2600949800C21EF6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B393BB822604D61100783EA1 /* ConversionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConversionViewController.swift; sourceTree = "<group>"; };
 		B393BB852604D76A00783EA1 /* CustomPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomPageViewController.swift; sourceTree = "<group>"; };
+		B39A2E362615CEFF00D4954B /* UITextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITextField.swift; sourceTree = "<group>"; };
+		B39A2E392615D39000D4954B /* UIViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewController.swift; sourceTree = "<group>"; };
 		B3C9E893260A19B80063FC0D /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		B3E495A2261DDA8800CD6EAF /* ResultViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultViewController.swift; sourceTree = "<group>"; };
 		FF2F9521CCA655C1C4336072 /* Pods-Kitchens Little Helper.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Kitchens Little Helper.release.xcconfig"; path = "Target Support Files/Pods-Kitchens Little Helper/Pods-Kitchens Little Helper.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -96,10 +116,17 @@
 			isa = PBXGroup;
 			children = (
 				B36BB15C2600949700C21EF6 /* AppDelegate.swift */,
+				B30BB086261E173B008E88D8 /* Converter.swift */,
+				B30BB08A261E1765008E88D8 /* ConverterManager.swift */,
 				B36BB15E2600949700C21EF6 /* SceneDelegate.swift */,
 				B36BB1602600949700C21EF6 /* RootViewController.swift */,
+				B3E495A2261DDA8800CD6EAF /* ResultViewController.swift */,
 				B31DCC5B2600AB9600F7F1EB /* DryIngredientsViewController.swift */,
+				B30BB08D261E2426008E88D8 /* Protocols.swift */,
+				B39A2E362615CEFF00D4954B /* UITextField.swift */,
+				B39A2E392615D39000D4954B /* UIViewController.swift */,
 				B31DCC5E2600ABAA00F7F1EB /* WetIngredientsViewController.swift */,
+				B30A17EE260CC8AD0049E1D0 /* UnitCollectionViewCell.swift */,
 				B31DCC612600ABC200F7F1EB /* PanViewController.swift */,
 				B31DCC642600ABD000F7F1EB /* OvenViewController.swift */,
 				B30716C12608C6C400D0AA87 /* Resources */,
@@ -108,6 +135,9 @@
 				B393BB822604D61100783EA1 /* ConversionViewController.swift */,
 				B393BB852604D76A00783EA1 /* CustomPageViewController.swift */,
 				B3C9E893260A19B80063FC0D /* Main.storyboard */,
+				B30A17EB260C9E9A0049E1D0 /* UnitView.swift */,
+				B319D46F260DE0EC00245F3A /* SwitchButton.swift */,
+				B319D472260E257200245F3A /* ConvertButton.swift */,
 			);
 			path = "Kitchens Little Helper";
 			sourceTree = "<group>";
@@ -236,13 +266,23 @@
 			files = (
 				B31DCC5F2600ABAA00F7F1EB /* WetIngredientsViewController.swift in Sources */,
 				B36BB1612600949700C21EF6 /* RootViewController.swift in Sources */,
+				B319D470260DE0EC00245F3A /* SwitchButton.swift in Sources */,
 				B31DCC652600ABD000F7F1EB /* OvenViewController.swift in Sources */,
+				B30BB087261E173B008E88D8 /* Converter.swift in Sources */,
 				B30716C32608C6E600D0AA87 /* CustomSegmentedControl.swift in Sources */,
 				B31DCC622600ABC200F7F1EB /* PanViewController.swift in Sources */,
 				B31DCC5C2600AB9600F7F1EB /* DryIngredientsViewController.swift in Sources */,
+				B30A17EF260CC8AD0049E1D0 /* UnitCollectionViewCell.swift in Sources */,
+				B3E495A3261DDA8800CD6EAF /* ResultViewController.swift in Sources */,
 				B36BB15D2600949700C21EF6 /* AppDelegate.swift in Sources */,
+				B319D473260E257200245F3A /* ConvertButton.swift in Sources */,
+				B30A17EC260C9E9A0049E1D0 /* UnitView.swift in Sources */,
+				B39A2E372615CEFF00D4954B /* UITextField.swift in Sources */,
 				B393BB832604D61100783EA1 /* ConversionViewController.swift in Sources */,
+				B30BB08E261E2426008E88D8 /* Protocols.swift in Sources */,
+				B30BB08B261E1765008E88D8 /* ConverterManager.swift in Sources */,
 				B36BB15F2600949700C21EF6 /* SceneDelegate.swift in Sources */,
+				B39A2E3A2615D39000D4954B /* UIViewController.swift in Sources */,
 				B393BB862604D76A00783EA1 /* CustomPageViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

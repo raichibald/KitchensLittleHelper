@@ -6,7 +6,7 @@ target 'Kitchens Little Helper' do
   use_frameworks!
 
   # Pods for Kitchens Little Helper
-pod 'SwiftyMenuBar'
-
+pod 'BetterSegmentedControl', '~> 2.0'
+pod 'AnimatableReload'
 
 end

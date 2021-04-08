@@ -13,7 +13,6 @@ class CustomSegmentedControl: UIControl {
     var segmentButtons = [UIButton]()
     var selector: UIView!
     var selectedSegmentIndex = 0
-    var lala: UISegmentedControl!
     
     
     //Background

@@ -6,48 +6,459 @@
 //
 
 import UIKit
+import AnimatableReload
+
 
 
 class DryIngredientsViewController: UIViewController {
+    
+    var dataOne = ["oz", "lbs", "A"]
+    var dataTwo = ["g", "kg"]
+    
+    var quantTextField = UITextField()
+    var switchButton = SwitchButton()
+    
+    private let unitCellWidth: CGFloat = 85
+    private let unitCellHeight: CGFloat = 108
+    
+    private var switchUnits = false
 
-    @IBOutlet weak var pickerViewOne: UIPickerView!
-    var rotationAngle: CGFloat!
+    
+    var leftInset: CGFloat = 0.0
+    var rightInset: CGFloat = 0.0
+    //var count = 3
+    
+    var selectedIndexOne = Int()
+    var selectedIndexTwo = Int()
+    
+    var selectedIndexPathOne = IndexPath(item: 0, section: 0)
+    var selectedIndexPathTwo = IndexPath(item: 0, section: 0)
+    
+    weak var conversionDelegate: ConversionDelegate?
     
     
-    var data = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J"]
+    //Setting UICollectionView to a function that returns itself
+    fileprivate let unitCollectionViewOne: UICollectionView = {
+        let layout = UICollectionViewFlowLayout()
+        layout.scrollDirection = .horizontal
+        
+        
+        let cv = UICollectionView(frame: .zero, collectionViewLayout: layout)
+        cv.translatesAutoresizingMaskIntoConstraints = false
+        
+        
+        //Registering normal collection view cell
+        cv.register(UnitCollectionViewCell.self, forCellWithReuseIdentifier: "unitCell")
+        
+        return cv
+    }()
+    
+    fileprivate let unitCollectionViewTwo: UICollectionView = {
+        let layout = UICollectionViewFlowLayout()
+        layout.scrollDirection = .horizontal
+        
+        let cv = UICollectionView(frame: .zero, collectionViewLayout: layout)
+        cv.translatesAutoresizingMaskIntoConstraints = false
+        
+        
+        //Registering normal collection view cell
+        cv.register(UnitCollectionViewCell.self, forCellWithReuseIdentifier: "unitCellTwo")
+        
+        return cv
+    }()
+    
+//    override func reloadData() {
+//        super.reloadData()
+//    }
+    override func viewWillAppear(_ animated: Bool) {
+        //print("////////////")
+//        let selectedIndexPathOne = IndexPath(item: 0, section: 0)
+//        let selectedIndexPathTwo = IndexPath(item: 0, section: 0)
+//        unitCollectionViewOne.selectItem(at: selectedIndexPathOne, animated: false, scrollPosition: .left)
+//        unitCollectionViewTwo.selectItem(at: selectedIndexPathTwo, animated: false, scrollPosition: .left)
+    }
+    
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        rotationAngle = 90 * (.pi / 180)
-        var originY = pickerViewOne.frame.origin.y
-        pickerViewOne?.transform = CGAffineTransform(rotationAngle: rotationAngle)
+        
+        unitCollectionViewOne.dataSource = self
+        unitCollectionViewOne.delegate = self
+        
+        unitCollectionViewTwo.dataSource = self
+        unitCollectionViewTwo.delegate = self
+        
+        dismissKeyboardWhenTappedOutside()
+        
+        quantTextField.delegate = self
+        quantTextField.addDoneButtonToKeyboard(myAction: #selector(quantTextField.resignFirstResponder))
+        
+        configureQuantTextField()
+        configureUnitCollectionView()
+        
+        unitCollectionViewOne.selectItem(at: selectedIndexPathOne, animated: false, scrollPosition: .left)
+        unitCollectionViewTwo.selectItem(at: selectedIndexPathTwo, animated: false, scrollPosition: .left)
         
         
-        pickerViewOne.frame = CGRect(x: -100, y: originY, width: view.frame.width + 200, height: 60)
         
-        pickerViewOne?.dataSource = self
-        pickerViewOne?.delegate = self
-        
+
  
     }
     
+//    override func viewDidAppear(_ animated: Bool) {
+//
+//        self.collectionView(unitCollectionViewOne, didSelectItemAt: IndexPath(index: 1))
+//        unitCollectionViewOne.selectItem(at: IndexPath(index: 1), animated: true, scrollPosition: [])
+//    }
+
+    func configureUnitCollectionView() {
+        view.addSubview(unitCollectionViewOne)
+        
+        
+        
+        
+        configureSwitchButton()
+        view.addSubview(unitCollectionViewTwo)
+        
+        unitCollectionViewOne.backgroundColor = UIColor(named: "darkWhite")
+        unitCollectionViewTwo.backgroundColor = UIColor(named: "darkWhite")
+        
+
+        setUnitCollectionViewOneConstraints()
+        //setSwitchButtonConstraints()
+        setUnitCollectionViewTwoConstraints()
+        
+        
+    }
+    
+//    func configureUnitViewLabels() {
+//        let bigLabel = UILabel(frame: CGRect(x: 0, y: 0, width: 30, height: 20))
+//        bigLabel.text = "OOZ"
+//        unitCollectionViewOne.addSubview(bigLabel)
+//        
+//    }
+
+    func setUnitCollectionViewOneConstraints() {
+        unitCollectionViewOne.topAnchor.constraint(equalTo: quantTextField.bottomAnchor, constant: 20).isActive = true
+        unitCollectionViewOne.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 0).isActive = true
+        unitCollectionViewOne.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: 0).isActive = true
+        unitCollectionViewOne.heightAnchor.constraint(equalToConstant: unitCellHeight).isActive = true
+ 
+    }
+    
+    func setUnitCollectionViewTwoConstraints() {
+        unitCollectionViewTwo.topAnchor.constraint(equalTo: switchButton.bottomAnchor, constant: 10).isActive = true
+        unitCollectionViewTwo.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 0).isActive = true
+        unitCollectionViewTwo.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: 0).isActive = true
+        unitCollectionViewTwo.heightAnchor.constraint(equalToConstant: unitCellHeight).isActive = true
+    }
+
+
+    func configureQuantTextField() {
+        view.addSubview(quantTextField)
+//        quantTextField.placeholder = "10"
+        quantTextField.keyboardType = .decimalPad
+        quantTextField.text = "10"
+        quantTextField.font = UIFont.boldSystemFont(ofSize: 80)
+        quantTextField.textAlignment = .center
+        quantTextField.adjustsFontSizeToFitWidth = true
+        quantTextField.layer.borderWidth = 3
+        quantTextField.layer.borderColor = UIColor(named: "warmRed")?.cgColor
+        quantTextField.layer.cornerRadius = 27
+
+        setQuantTextFieldConstraints()
+
+    }
+
+    func setQuantTextFieldConstraints() {
+        quantTextField.translatesAutoresizingMaskIntoConstraints = false
+        quantTextField.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 20).isActive = true
+        quantTextField.centerXAnchor.constraint(equalTo: view.safeAreaLayoutGuide.centerXAnchor).isActive = true
+        quantTextField.widthAnchor.constraint(equalToConstant: 150).isActive = true
+        quantTextField.heightAnchor.constraint(equalToConstant: 85).isActive = true
+
+    }
+    
+    func configureSwitchButton() {
+        view.addSubview(switchButton)
+        
+        switchButton.addTarget(self, action: #selector(switchButtonTapped), for: .touchUpInside)
+        
+        
+        setSwitchButtonConstraints()
+        
+    }
+    
+    @objc func switchButtonTapped() {
+        
+        
+        
+        switchUnits = !switchUnits
+        
+        
+        DispatchQueue.main.async {
+            if self.switchUnits {
+                UIView.animate(withDuration: 0.5) {
+                    self.switchButton.imageView?.transform = CGAffineTransform(rotationAngle: -0.999 * CGFloat.pi)
+                }
+                
+                
+                AnimatableReload.reload(collectionView: self.unitCollectionViewOne, animationDirection: "left")
+                AnimatableReload.reload(collectionView: self.unitCollectionViewTwo, animationDirection: "right")
+                
+                //selecting previously selected cells on switch
+                self.unitCollectionViewOne.selectItem(at: self.selectedIndexPathTwo, animated: true, scrollPosition: .left)
+                self.unitCollectionViewTwo.selectItem(at: self.selectedIndexPathOne, animated: true, scrollPosition: .left)
+                
+                
+                
+            } else {
+                UIView.animate(withDuration: 0.5) {
+                    self.switchButton.imageView?.transform = .identity
+                }
+                
+                AnimatableReload.reload(collectionView: self.unitCollectionViewOne, animationDirection: "right")
+                AnimatableReload.reload(collectionView: self.unitCollectionViewTwo, animationDirection: "left")
+                
+                //selecting previously selected cells on switch
+                self.unitCollectionViewOne.selectItem(at: self.selectedIndexPathTwo, animated: true, scrollPosition: .left)
+                self.unitCollectionViewTwo.selectItem(at: self.selectedIndexPathOne, animated: true, scrollPosition: .left)
+            }
+            
+            
+        }
+        
+//        UIView.transition(with: unitCollectionViewOne, duration: 0.5, options: ., animations: {
+//            self.unitCollectionViewOne.reloadData()
+//        }, completion: nil)
+        
+        if switchUnits {
+            
+        } else {
+           
+        }
+//        AnimatableReload.reload(collectionView: unitCollectionViewOne, animationDirection: "right")
+////        unitCollectionViewOne.reloadData()
+//        unitCollectionViewTwo.reloadData()
+        //print(switchUnits)
+    }
+    
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+        switchButton.clipsToBounds = true
+        switchButton.layer.cornerRadius = switchButton.frame.size.width / 2
+    }
+    
+//    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+//        quantTextField.endEditing(true)
+//    }
+//
+    func setSwitchButtonConstraints() {
+        switchButton.translatesAutoresizingMaskIntoConstraints = false
+        switchButton.topAnchor.constraint(equalTo: unitCollectionViewOne.bottomAnchor, constant: 10).isActive = true
+        switchButton.centerXAnchor.constraint(equalTo: view.safeAreaLayoutGuide.centerXAnchor).isActive = true
+//        switchButton.bottomAnchor.constraint(equalTo: unitCollectionViewTwo.topAnchor, constant: 10).isActive = true
+        switchButton.widthAnchor.constraint(equalToConstant: 60).isActive = true
+        switchButton.heightAnchor.constraint(equalToConstant: 60).isActive = true
+    }
+
 
 }
 
-extension DryIngredientsViewController: UIPickerViewDelegate, UIPickerViewDataSource {
-    func numberOfComponents(in pickerView: UIPickerView) -> Int {
-        return 1
+extension DryIngredientsViewController: UICollectionViewDelegateFlowLayout, UICollectionViewDataSource {
+
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+
+        return CGSize(width: unitCellWidth, height: collectionView.frame.height)
     }
 
-    func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
-        return data.count
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        if collectionView == unitCollectionViewOne {
+            if !switchUnits {
+                return dataOne.count
+            } else {
+                return dataTwo.count
+            }
+            
+        } else {
+            if switchUnits {
+                return dataOne.count
+            } else {
+                return dataTwo.count
+            }
+            //return dataTwo.count
+        }
+        
     }
+    
+    
 
-    func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
-        return data[row]
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        
+        
+//        let selectedIndexPathOne = IndexPath(item: 0, section: 0)
+//
+//        self.unitCollectionViewOne.selectItem(at: selectedIndexPathOne, animated: false, scrollPosition: .left)
+        
+        if collectionView == unitCollectionViewOne {
+            let unitCell = collectionView.dequeueReusableCell(withReuseIdentifier: "unitCell", for: indexPath) as! UnitCollectionViewCell
+            
+            if !switchUnits {
+                unitCell.bigLabel.text = dataOne[indexPath.row]
+            } else {
+                unitCell.bigLabel.text = dataTwo[indexPath.row]
+                
+            }
+            
+//            if selectedIndexOne == indexPath.row {
+//                unitCell.backgroundColor = UIColor(named: "warmRed")
+//            } else {
+//                unitCell.backgroundColor = UIColor(named: "warmRed")?.withAlphaComponent(0.4)
+//            }
+            
+            
+            
+            
+            return unitCell
+        } else {
+            let unitCell = collectionView.dequeueReusableCell(withReuseIdentifier: "unitCellTwo", for: indexPath) as! UnitCollectionViewCell
+            
+            if switchUnits {
+                unitCell.bigLabel.text = dataOne[indexPath.row]
+            } else {
+                unitCell.bigLabel.text = dataTwo[indexPath.row]
+            }
+            
+//            if selectedIndexTwo == indexPath.row {
+//                unitCell.backgroundColor = UIColor(named: "warmRed")
+//            } else {
+//                unitCell.backgroundColor = UIColor(named: "warmRed")?.withAlphaComponent(0.4)
+//            }
+            
+            
+            
+            return unitCell
+        }
+        
+        
+
     }
+    
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        
+        print("=========== \(indexPath)")
+        guard let unitQuant = quantTextField.text else { return }
+        
+        if collectionView == unitCollectionViewOne {
+            selectedIndexPathOne = indexPath
+            
+            if !switchUnits {
+                
+                print(dataOne[indexPath.row])
+            } else {
+                print(dataTwo[indexPath.row])
+                
+            }
+            print("///// \(unitQuant)")
+            conversionDelegate?.converterSettingsWasSet(value: "900", unitOne: "ola", unitTwo: "zivs")
+            
+        } else if collectionView == unitCollectionViewTwo {
+            print(",,,,,,,,,,,,,,,")
+            selectedIndexPathTwo = indexPath
+            
+            if switchUnits {
+                print(dataOne[indexPath.row])
+            } else {
+                print(dataTwo[indexPath.row])
+                
+            }
+            conversionDelegate?.converterSettingsWasSet(value: unitQuant, unitOne: dataOne[indexPath.row], unitTwo: dataTwo[indexPath.row])
+        }
+        
+        
+        
+        
+        
+        
+        
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, didDeselectItemAt indexPath: IndexPath) {
+        let selectedCell: UnitCollectionViewCell = collectionView.cellForItem(at: indexPath) as! UnitCollectionViewCell
+        //selectedCell.contentView.backgroundColor = .none
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
+       
+        if collectionView == unitCollectionViewOne {
+            if !switchUnits {
+                return centerItemsInCollectionView(cellWidth: Double(unitCellWidth), numberOfItems: Double(dataOne.count), spaceBetweenCell: 10, collectionView: unitCollectionViewOne)
+            } else {
+                return centerItemsInCollectionView(cellWidth: Double(unitCellWidth), numberOfItems: Double(dataTwo.count), spaceBetweenCell: 10, collectionView: unitCollectionViewOne)
+            }
+            
+        } else {
+            
+            if switchUnits {
+                return centerItemsInCollectionView(cellWidth: Double(unitCellWidth), numberOfItems: Double(dataOne.count), spaceBetweenCell: 10, collectionView: unitCollectionViewTwo)
+            } else {
+                return centerItemsInCollectionView(cellWidth: Double(unitCellWidth), numberOfItems: Double(dataTwo.count), spaceBetweenCell: 10, collectionView: unitCollectionViewTwo)
+            }
+            
+        }
+        
+        
+    }
+    
+    
+    
+    func centerItemsInCollectionView(cellWidth: Double, numberOfItems: Double, spaceBetweenCell: Double, collectionView: UICollectionView) -> UIEdgeInsets {
+            let totalWidth = cellWidth * numberOfItems
+            let totalSpacingWidth = spaceBetweenCell * (numberOfItems - 1)
+            let leftInset = (collectionView.frame.width - CGFloat(totalWidth + totalSpacingWidth)) / 2
+            let rightInset = leftInset
+            if leftInset < 0 {
+                collectionView.isScrollEnabled = true
+                return UIEdgeInsets(top: 0, left: 10, bottom: 0, right: 10)
+            }
+            collectionView.isScrollEnabled = false
+            return UIEdgeInsets(top: 0, left: leftInset, bottom: 0, right: rightInset)
+        }
+    
+    
+
+
 }
+
+extension DryIngredientsViewController: UITextFieldDelegate {
+
+    
+    func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
+//        let allowedCharacters = CharacterSet.decimalDigits
+//        let characterSet = CharacterSet(charactersIn: string)
+//        return allowedCharacters.isSuperset(of: characterSet)
+        
+        if let comma = textField.text?.components(separatedBy: ",").count {
+            if comma > 1 && string == "," {
+                return false
+            }
+            
+        }
+        
+        return true
+    }
+    
+    
+    
+}
+
+
+
+
+
+
 
 
 

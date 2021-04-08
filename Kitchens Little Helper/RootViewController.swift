@@ -6,16 +6,36 @@
 //
 
 import UIKit
+import BetterSegmentedControl
 
-class RootViewController: UIViewController {
-
-    @IBOutlet weak var conversionContentView: UIView!
+class RootViewController: UIViewController, CustomPageViewControlIndexDelegate, ConversionDelegate {
     
     
     
-    @IBOutlet weak var segmentedControl: CustomSegmentedControl!
+    
+    
+    var converterManager = ConverterManager()
+    
+    var currentViewControllerIndex = 0
+    
+    @IBOutlet weak var segmentedControl: BetterSegmentedControl!
+    
+    
+    @IBOutlet weak var convertButton: ConvertButton!
+    
+    
+    let titles = ["Weight", "Volume", "Pan", "Oven"]
     
     var customPageViewController: CustomPageViewController!
+    var dryIngredientsViewController = DryIngredientsViewController()
+    
+    var selectedIndex: Int = 0
+    var indy = 0
+    
+    var unitQuant: String = ""
+    var unitOne: String = ""
+    var unitTwo: String = ""
+    
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "customPageVCSegue" {
@@ -23,270 +43,166 @@ class RootViewController: UIViewController {
                 customPageViewController = segue.destination as? CustomPageViewController
             }
         }
+        
+        if segue.identifier == "goToResults" {
+            let resultViewController = segue.destination as! ResultViewController
+            print(converterManager.getConversionValue())
+            
+        }
     }
     
-    
-    var currentViewControllerIndex = 0
-    
-//    lazy var viewControllerList: [UIViewController] = {
-//        let dryVC = DryIngredientsViewController()
-//        let wetVC = WetIngredientsViewController()
-//        let panVC = PanViewController()
-//        let ovenVC = OvenViewController()
-//
-//        return [dryVC, wetVC, panVC, ovenVC]
-//    }()
-    
-//   lazy var viewControllerList: [UIViewController] = {
-//        let dryVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: String(describing: DryIngredientsViewController.self))
-//
-//        let wetVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: String(describing: WetIngredientsViewController.self))
-//
-//        let panVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: String(describing: PanViewController.self))
-//
-//        let ovenVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: String(describing: OvenViewController.self))
-//
-//
-//
-//        return [dryVC, wetVC, panVC, ovenVC]
-//    }()
-//
-//    let dryVC = DryIngredientsViewController()
-//    let wetVC = WetIngredientsViewController()
-//    let panVC = PanViewController()
-//    let ovenVC = OvenViewController()
-    
-    let dataSource = ["Dry", "Wet", "Pan", "Oven"]
-    
-    
-//
     override func viewDidLoad() {
         super.viewDidLoad()
         
+//        segmentedControl.delegate = self
+        customPageViewController.indexDelegate = self
+        dryIngredientsViewController.conversionDelegate = self
+        
+//
+//        segmentedControl.setSegmentItems(titles)
+//        segmentedControl.segmentsBackgroundColor = UIColor(named: "darkWhite")!
+//        segmentedControl.backgroundColor = UIColor(named: "darkWhite")!
+//        segmentedControl.isSliderShadowHidden = true
+//        segmentedControl.sliderBackgroundColor = UIColor(named: "warmRed")!
+//        segmentedControl.addTarget(self, action: #selector(segmentControlValueChanged(sender:)), for: .valueChanged)
+//
+//
+//
+//
+//        print("SEGMENT CREATED")
+        
+        segmentedControl.segments = LabelSegment.segments(withTitles: titles, normalTextColor: .white, selectedTextColor: UIColor(red: 0.92, green: 0.29, blue: 0.15, alpha: 1.00))
         
         
-//        configurePageViewController()
 
     }
     
+//    @objc func lol(_ sender: TwicketSegmentedControl) {
+//        print("lol")
+//    }
     
-    
-    
-    
-    
-    @IBAction func segmentButtonPressed(_ sender: CustomSegmentedControl) {
-        
-        customPageViewController.setViewControllerAt(index: sender.selectedSegmentIndex)
-        
-        
-//        button.addTarget(self, action: #selector(segmentButtonTapped(button:)), for: .touchUpInside)
-        
-//        guard let pageViewController = storyboard?.instantiateViewController(withIdentifier: String(describing: CustomPageViewController.self)) as? CustomPageViewController else { return }
+//    func segmentControlValueChanged() {
+//        let selectedIndex = self.selectedIndex
 //
-//        guard let startingViewController = detailViewControllerAt(index: sender.selectedSegmentIndex) else { return }
-//        print("£££££££££££££££ \(sender.selectedSegmentIndex)")
-//
-//        pageViewController.setViewControllers([startingViewController], direction: .forward, animated: true, completion: nil)
-        
-        
-        
-        
-        
-    }
-    
-    @objc func segmentButtonTapped(sender: CustomSegmentedControl) {
-        print("---- \(sender)")
-    }
-    
-//    func configurePageViewController() {
-//        //All initialization logic
-//
-//        guard let pageViewController = storyboard?.instantiateViewController(withIdentifier: String(describing: CustomPageViewController.self)) as? CustomPageViewController else { return }
-//
-//
-//
-//        pageViewController.delegate = self
-//        pageViewController.dataSource = self
-//
-//
-//        //Adding PageViewController as a child view controller
-//        addChild(pageViewController)
-//        pageViewController.didMove(toParent: self)
-//
-//        //Auto-layout
-//        pageViewController.view.translatesAutoresizingMaskIntoConstraints = false
-//
-//        conversionContentView.addSubview(pageViewController.view)
-//
-//        let views: [String: Any] = ["pageView": pageViewController.view]
-//
-//        //Adding constraints to conversionContentView
-//        conversionContentView.addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "H:|-0-[pageView]-0-|", options: NSLayoutConstraint.FormatOptions(rawValue: 0), metrics: nil, views: views))
-//
-//        conversionContentView.addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "V:|-0-[pageView]-0-|", options: NSLayoutConstraint.FormatOptions(rawValue: 0), metrics: nil, views: views))
-//
-//
-////        guard let startingViewController = detailViewControllerAt(index: currentViewControllerIndex) else { return }
-////
-////        pageViewController.setViewControllers([startingViewController], direction: .forward, animated: true, completion: nil)
-//
-//        if let initialViewController = viewControllerList.first {
-//            pageViewController.setViewControllers([initialViewController], direction: .forward, animated: true, completion: nil)
+//        if segmentedControl.selectedSegmentIndex > selectedIndex {
+//            let nextIndex = selectedIndex + 1
+//            for index in nextIndex...segmentedControl.selectedSegmentIndex {
+//                customPageViewController.setViewControllerAt(index: index)
+//            }
+//        } else if segmentedControl.selectedSegmentIndex < selectedIndex {
+//            let previousIndex = selectedIndex - 1
+//            for index in (segmentedControl.selectedSegmentIndex...previousIndex).reversed() {
+//                customPageViewController.setViewControllerAt(index: index)
+//            }
 //        }
 //
 //    }
     
-//    func detailViewControllerAt(index: Int) -> ConversionViewController? {
-//
-////        if index >= dataSource.count || dataSource.count == 0 {
-////            return nil
-////        }
-////
-////        guard let conversionViewController = storyboard?.instantiateViewController(withIdentifier: String(describing: ConversionViewController.self)) as? ConversionViewController else { return nil }
-////
-////        conversionViewController.index = index
-////        conversionViewController.displayText = dataSource[index]
-//
-//        if index >= viewControllerList.count || viewControllerList.count == 0 {
-//            return nil
+    
+    
+    
+    func callSegment() {
+        
+        //print("This gets called, \(type(of: segmentedControl))")
+//        if let segment = segmentedControl {
+//            print("TYpe of \(type(of: segment))")
 //        }
-//
-//
-////        print("Gets Called ------ \(index)")
-//
-//        //let conversionViewController = viewController as? ConversionViewController
-//
-//        //guard var currentIndex = conversionViewController?.index else { return nil }
-//
-////        switch index {
-////        case 0:
-////            segmentedControl.selectedSegmentIndex = 0
-////        case 1:
-////            segmentedControl.selectedSegmentIndex = 1
-////        case 2:
-////            segmentedControl.selectedSegmentIndex = 2
-////        case 3:
-////            segmentedControl.selectedSegmentIndex = 3
-////        default:
-////            print("Could not load segmented control!")
-////        }
-//
-//
-////        if currentViewControllerIndex == 1 {
-////            dryIndicatorButton.backgroundColor = .systemRed
-////
-////        } else {
-////            dryIndicatorButton.backgroundColor = nil
-////        }
-//
-////        return conversionViewController
-//        return nil
+        
+        
+        
+        
+        
+    }
+    
+    @IBAction func convertButtonTapped(_ sender: ConvertButton) {
+        DispatchQueue.main.async {
+            UIView.animate(withDuration: 0.3) {
+                sender.setTitleColor(UIColor(named: "warmRed"), for: .normal)
+                sender.backgroundColor = UIColor(named: "darkWhite")
+            }
+        }
+        
+        print(";;;;; \(unitQuant)")
+        converterManager.convertUnits(value: unitQuant, unitOne: unitOne, unitTwo: unitTwo)
+        
+        performSegue(withIdentifier: "goToResults", sender: self)
+        
+        
+    }
+    
+    @IBAction func convertButtonReleased(_ sender: ConvertButton) {
+        DispatchQueue.main.async {
+            UIView.animate(withDuration: 0.3) {
+                sender.setTitleColor(UIColor(named: "darkWhite"), for: .normal)
+                sender.backgroundColor = UIColor(named: "warmRed")
+            }
+            
+        }
+        
+        
+    }
+    
+    @IBAction func convertButtonCancelled(_ sender: ConvertButton) {
+        DispatchQueue.main.async {
+            UIView.animate(withDuration: 0.3) {
+                sender.setTitleColor(UIColor(named: "warmRed"), for: .normal)
+                sender.backgroundColor = UIColor(named: "darkWhite")
+            }
+        }
+    }
+    //    @IBAction func segmentedControlValueChanged(_ sender: TwicketSegmentedControl) {
+//        //sender.sendActions(for: .valueChanged)
+//        print("wwwww \(sender.selectedSegmentIndex)")
 //    }
+    
+    
+    
+    func indexWasSetAt(_ index: Int) {
+//        print("!@!£@!£!@£@£@!!@ \(index)")
+        //indy = index
+        
+        segmentedControl.setIndex(index)
+    }
+    
 
-
+    
+    func converterSettingsWasSet(value: String, unitOne: String, unitTwo: String) {
+        print("gets called")
+        self.unitQuant = value
+        self.unitOne = unitOne
+        self.unitTwo = unitTwo
+        
+    }
+    
+    @IBAction func segmentedControlValueChanged(_ sender: BetterSegmentedControl) {
+//        print("£££££££ \(sender.index)")
+        
+        
+        
+        customPageViewController.setViewControllerAt(index: sender.index)
+        
+        
+        
+        
+        //customPageViewController.setViewControllerAt(index: indy)
+        
+        
+//        if sender.index > selectedIndex {
+//            let nextIndex = selectedIndex + 1
+//            for index in nextIndex...sender.index {
+//                customPageViewController.setViewControllerAt(index: index)
+//            }
+//        } else if sender.index < selectedIndex {
+//            let previousIndex = selectedIndex - 1
+//            for index in (sender.index...previousIndex).reversed() {
+//                customPageViewController.setViewControllerAt(index: index)
+//            }
+//        }
+        
+    }
+    
 }
 
-
-//extension RootViewController: UIPageViewControllerDelegate, UIPageViewControllerDataSource {
-//
-//    func presentationIndex(for pageViewController: UIPageViewController) -> Int {
-//        return currentViewControllerIndex
-//    }
-//
-//    func presentationCount(for pageViewController: UIPageViewController) -> Int {
-//        return dataSource.count
-//    }
-//
-//    func pageViewController(_ pageViewController: UIPageViewController, willTransitionTo pendingViewControllers: [UIViewController]) {
-//        if let pageItemController = pendingViewControllers[0] as? ConversionViewController {
-//            print("????????? \(pageItemController.index)")
-//            segmentedControl.selectedSegmentIndex = pageItemController.index
-//
-//
-//            print("============ \(segmentedControl.selectedSegmentIndex)")
-////            switch pageItemController.index {
-////            case 0:
-////                //segmentedControl.selectedSegmentIndex = 0
-////                segmentedControl.selectedSegmentIndex = 0
-////            case 1:
-////                segmentedControl.selectedSegmentIndex = 1
-////            case 2:
-////                segmentedControl.selectedSegmentIndex = 2
-////            case 3:
-////                segmentedControl.selectedSegmentIndex = 3
-////            default:
-////                print("Could not load segmented control!")
-////            }
-//        }
-//    }
-//
-//    func pageViewController(_ pageViewController: UIPageViewController, viewControllerBefore viewController: UIViewController) -> UIViewController? {
-//
-////        let conversionViewController = viewController as? ConversionViewController
-////
-////
-////        guard var currentIndex = conversionViewController?.index, currentIndex > 0 else { return nil }
-////        print("current index_1 \(currentIndex)")
-////
-////
-//////        if currentIndex > 0 {
-//////            return nil
-//////        }
-////        currentViewControllerIndex = currentIndex
-////        currentIndex -= 1
-////
-////
-////
-////        //print("current index ------ \(currentIndex)")
-////
-////        return detailViewControllerAt(index: currentIndex)
-//
-//        guard let currentViewControllerIndex = viewControllerList.firstIndex(of: viewController) else { return nil }
-//
-//        let previousIndex = currentViewControllerIndex - 1
-//
-//        guard previousIndex >= 0 else { return nil }
-//
-//        guard viewControllerList.count > previousIndex else { return nil }
-//
-//        return viewControllerList[previousIndex]
-//
-//    }
-//
-//    func pageViewController(_ pageViewController: UIPageViewController, viewControllerAfter viewController: UIViewController) -> UIViewController? {
-//
-////        let conversionViewController = viewController as? ConversionViewController
-////
-////        guard var currentIndex = conversionViewController?.index, currentIndex < (dataSource.count - 1) else { return nil }
-////        print("current index_2 \(currentIndex)")
-////
-//////        if currentIndex == dataSource.count - 1 {
-//////            return nil
-//////        }
-////
-////        currentIndex += 1
-////        currentViewControllerIndex = currentIndex
-////
-////
-////        //print("current index ------ \(currentIndex)")
-////
-////        return detailViewControllerAt(index: currentIndex)
-//
-//        guard let currentViewControllerIndex = viewControllerList.firstIndex(of: viewController) else { return nil }
-//
-//        let nextIndex = currentViewControllerIndex + 1
-//        guard viewControllerList.count != nextIndex else { return nil }
-//        guard viewControllerList.count > nextIndex else { return nil }
-//
-//        return viewControllerList[nextIndex]
-//
-//    }
-//
-//
-//
-//
-//}
-//
 
 
 

@@ -7,74 +7,114 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		0927826DDADE17032C1DE27666580BB9 /* Pods-Kitchens Little Helper-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 579566B727AFB2655697DC8736AC9C8A /* Pods-Kitchens Little Helper-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		1C072F45B5A1DD092B5479F34E18CAA1 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EAB6F611E86A4758835A715E4B4184F6 /* Foundation.framework */; };
-		291630109F357601077C4CCED91D9FB8 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D245E0514AAC1A2B9A6D5EA2F383E90F /* UIKit.framework */; };
-		339DF44415E215FE1749B0F45EDE4CB2 /* LayoutAnchors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27FEC868D4D05E5BB22F074EC096C620 /* LayoutAnchors.swift */; };
-		4A0DF7074EBF9800B3B1E9FFEF3110CB /* MenuBarConfigurations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 853044AF7AEDB556FAAD046ADD552282 /* MenuBarConfigurations.swift */; };
-		4B25554ABC49486AF66DEF37EE377162 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EAB6F611E86A4758835A715E4B4184F6 /* Foundation.framework */; };
-		539DD26836048C87E4B9AACF7C056777 /* MenuBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03D280078170062325050426A59A54D0 /* MenuBarController.swift */; };
-		64BB8187EC9BBECC6509F13DFF481783 /* SwiftyMenuBar-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 301525913B87747EE01623CCD083C3F3 /* SwiftyMenuBar-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		79FE36D1C8226717456AE44480908995 /* MenuBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = A44031301980CD52A0DB452CEB330D9A /* MenuBar.swift */; };
-		D2A3F04000D87EEA6640F439E68EC6ED /* SwiftyMenuBar-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 4AF077DCF6457F17F8BF4A12E5D29294 /* SwiftyMenuBar-dummy.m */; };
-		F57865375207847E0221B4998562E9B1 /* Pods-Kitchens Little Helper-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 526055A8DD7BE49A2459884E839A430A /* Pods-Kitchens Little Helper-dummy.m */; };
-		FDF3691FED86E1F8B3064A270072EEE5 /* MenuBarCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 853E43D2A98B9E91EC3DA72513A12546 /* MenuBarCell.swift */; };
+		03F79508D8D217B8CE96A031C12519A1 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EAB6F611E86A4758835A715E4B4184F6 /* Foundation.framework */; };
+		07B8968BD31271E7FC18D85921C2AC0F /* BetterSegmentedControl+Options.swift in Sources */ = {isa = PBXBuildFile; fileRef = C556F716B8AE917A7FD4D0E49DBEBD4D /* BetterSegmentedControl+Options.swift */; };
+		0AC3A362AC3E567A4D1D56AEE46CB12F /* BetterSegmentedControl+IndicatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD639F056194D9D593AFF0990A394227 /* BetterSegmentedControl+IndicatorView.swift */; };
+		18E0A647F4CA8CD849EDAAF88C55DB7C /* Pods-Kitchens Little Helper-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 579566B727AFB2655697DC8736AC9C8A /* Pods-Kitchens Little Helper-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		2AA8A25AD6181EC55EFEB2243CDC2C17 /* BetterSegmentedControl+UIPointerInteractionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 803CE1AD406D4E3B8D5A5D64A6FC9AAF /* BetterSegmentedControl+UIPointerInteractionDelegate.swift */; };
+		30856EB6C9B5883DAB648ED2AB35BCCE /* AnimatableReload-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 0CDEA11EB1133A631B44E273700ED242 /* AnimatableReload-dummy.m */; };
+		566E310657BDE3DC19F32D814E89F007 /* LabelSegment.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2F17CF755CC05DCA77E20E0D9C069A5 /* LabelSegment.swift */; };
+		649FF14F1BEDBCD9190ABFA52A2B5093 /* UIView+Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04C8D3335E240F0D8B66069C784F32C3 /* UIView+Helpers.swift */; };
+		658E64A307DA4636F0619CFA8211D389 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EAB6F611E86A4758835A715E4B4184F6 /* Foundation.framework */; };
+		6997891C4061A45CA95B6E960D31C491 /* BetterSegmentedControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE3F81A6FFDA34B94EC9DDEAC9B623EE /* BetterSegmentedControl.swift */; };
+		6E01E220C6A201626332018674B7F6E9 /* Pods-Kitchens Little Helper-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 526055A8DD7BE49A2459884E839A430A /* Pods-Kitchens Little Helper-dummy.m */; };
+		71EA36AE6524B7BBEDE1BDB7BE3B021B /* BetterSegmentedControl-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A0A5818DCF6A47F12EDE5FCEE4989F8 /* BetterSegmentedControl-dummy.m */; };
+		78B53A1F67EFA82F1BEC50EC0DF88568 /* AnimatableReload.swift in Sources */ = {isa = PBXBuildFile; fileRef = 427E247163FDA2C6940D908480010DC8 /* AnimatableReload.swift */; };
+		9A43C8C2D3011AAC543038A3C57927A3 /* BetterSegmentedControl+IBDesignable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33B8E98211CCEF00F4FD61E52C4A7D05 /* BetterSegmentedControl+IBDesignable.swift */; };
+		A268632B3937A44826947456601E32BB /* IconSegment.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB6024A0FFCC85FE65AB8DE7B12613FF /* IconSegment.swift */; };
+		ACF3054A4868B3161B3DBB9FE58EEAA4 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EAB6F611E86A4758835A715E4B4184F6 /* Foundation.framework */; };
+		C59D8B4CE0A5E8B9B419841ED6E5633D /* AnimatableReload-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = FA0F12D05C570F77D6F149880AF14303 /* AnimatableReload-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		C7DEFB89A1384CACED536E39301F77E4 /* UIColor+Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 458086C118F17538F38861C4B1C1C3CA /* UIColor+Helpers.swift */; };
+		CA418CAE44795383B11D3F002BC6FFC9 /* BetterSegmentedControlSegment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 263BC9AFB391E5F9C9859F2E370B0523 /* BetterSegmentedControlSegment.swift */; };
+		DE1571BEDE32685E5B22F71F1ABE02F2 /* BetterSegmentedControl-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 2EB15E00501A7FDD21878EB366D45A0F /* BetterSegmentedControl-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		EFE58C980B925E50CDF098465E7DCE6E /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D245E0514AAC1A2B9A6D5EA2F383E90F /* UIKit.framework */; };
+		F5450A7D2B901241180AA5C3768B5D1F /* BetterSegmentedControl+PredefinedStyles.swift in Sources */ = {isa = PBXBuildFile; fileRef = 072A8567B354889CB75D04DB48300570 /* BetterSegmentedControl+PredefinedStyles.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		588BD7A8E023F9D05FEED74C9F0ABECE /* PBXContainerItemProxy */ = {
+		521271B0EFF4CF4811564ACE9871A132 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 1238B9DB06D12A06466D349CF61BAED5;
-			remoteInfo = SwiftyMenuBar;
+			remoteGlobalIDString = FFA0A1DD066506A523D6C9452B9CD06B;
+			remoteInfo = BetterSegmentedControl;
+		};
+		EB91E91A484402A0FFA436506973BF57 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = E6F2C4BF4F14A0150EA8C977175C9A0D;
+			remoteInfo = AnimatableReload;
 		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		0178BEA89F82D94FC5DCEBED6FA5FF6A /* Pods-Kitchens Little Helper.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Kitchens Little Helper.release.xcconfig"; sourceTree = "<group>"; };
-		03D280078170062325050426A59A54D0 /* MenuBarController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = MenuBarController.swift; path = SwiftyMenuBar/Classes/MenuBarController.swift; sourceTree = "<group>"; };
-		1B0382632B8A8DF844EC8757B7709D3A /* SwiftyMenuBar.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SwiftyMenuBar.debug.xcconfig; sourceTree = "<group>"; };
-		1CE79A64FE234F8CE6AFBE57B5EBA658 /* SwiftyMenuBar-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "SwiftyMenuBar-Info.plist"; sourceTree = "<group>"; };
-		27FEC868D4D05E5BB22F074EC096C620 /* LayoutAnchors.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = LayoutAnchors.swift; path = SwiftyMenuBar/Classes/LayoutAnchors.swift; sourceTree = "<group>"; };
-		301525913B87747EE01623CCD083C3F3 /* SwiftyMenuBar-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SwiftyMenuBar-umbrella.h"; sourceTree = "<group>"; };
-		4AF077DCF6457F17F8BF4A12E5D29294 /* SwiftyMenuBar-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "SwiftyMenuBar-dummy.m"; sourceTree = "<group>"; };
+		04C8D3335E240F0D8B66069C784F32C3 /* UIView+Helpers.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UIView+Helpers.swift"; path = "Pod/Classes/Helpers/UIView+Helpers.swift"; sourceTree = "<group>"; };
+		072A8567B354889CB75D04DB48300570 /* BetterSegmentedControl+PredefinedStyles.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "BetterSegmentedControl+PredefinedStyles.swift"; path = "Pod/Classes/BetterSegmentedControl+PredefinedStyles.swift"; sourceTree = "<group>"; };
+		0971B0AFD3BCBB672F48342DD0F5E060 /* BetterSegmentedControl.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = BetterSegmentedControl.framework; path = BetterSegmentedControl.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		0CDEA11EB1133A631B44E273700ED242 /* AnimatableReload-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "AnimatableReload-dummy.m"; sourceTree = "<group>"; };
+		224DAD9939897B1B3C5571560855DE56 /* BetterSegmentedControl.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = BetterSegmentedControl.modulemap; sourceTree = "<group>"; };
+		263BC9AFB391E5F9C9859F2E370B0523 /* BetterSegmentedControlSegment.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = BetterSegmentedControlSegment.swift; path = Pod/Classes/Segments/BetterSegmentedControlSegment.swift; sourceTree = "<group>"; };
+		2BCF24327824422F56BFE8DE0623B46F /* AnimatableReload.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = AnimatableReload.release.xcconfig; sourceTree = "<group>"; };
+		2EB15E00501A7FDD21878EB366D45A0F /* BetterSegmentedControl-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "BetterSegmentedControl-umbrella.h"; sourceTree = "<group>"; };
+		2ECFC9C52546EB47EA04FB88FBFF55CC /* AnimatableReload.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = AnimatableReload.framework; path = AnimatableReload.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		32E8DB24A5B9745BF7CBE3D4E143385C /* AnimatableReload-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "AnimatableReload-Info.plist"; sourceTree = "<group>"; };
+		33B8E98211CCEF00F4FD61E52C4A7D05 /* BetterSegmentedControl+IBDesignable.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "BetterSegmentedControl+IBDesignable.swift"; path = "Pod/Classes/BetterSegmentedControl+IBDesignable.swift"; sourceTree = "<group>"; };
+		3FEB10FDBBBF30DAD7096BBC8B6AB447 /* AnimatableReload.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = AnimatableReload.debug.xcconfig; sourceTree = "<group>"; };
+		427E247163FDA2C6940D908480010DC8 /* AnimatableReload.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AnimatableReload.swift; path = AnimatableReload/Classes/AnimatableReload.swift; sourceTree = "<group>"; };
+		458086C118F17538F38861C4B1C1C3CA /* UIColor+Helpers.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UIColor+Helpers.swift"; path = "Pod/Classes/Helpers/UIColor+Helpers.swift"; sourceTree = "<group>"; };
 		526055A8DD7BE49A2459884E839A430A /* Pods-Kitchens Little Helper-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-Kitchens Little Helper-dummy.m"; sourceTree = "<group>"; };
 		579566B727AFB2655697DC8736AC9C8A /* Pods-Kitchens Little Helper-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-Kitchens Little Helper-umbrella.h"; sourceTree = "<group>"; };
+		584BBB4E298AE37E2ABD362CE64C839E /* BetterSegmentedControl-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "BetterSegmentedControl-prefix.pch"; sourceTree = "<group>"; };
 		5B54EA40F6A21533DF548072771DF074 /* Pods-Kitchens Little Helper-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-Kitchens Little Helper-acknowledgements.markdown"; sourceTree = "<group>"; };
 		5DC8AF04DF6A4C7F24F4A868D6207DDE /* Pods-Kitchens Little Helper-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Kitchens Little Helper-Info.plist"; sourceTree = "<group>"; };
-		6EC45A4E9F209403CD9D1B84111AAD83 /* SwiftyMenuBar.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = SwiftyMenuBar.modulemap; sourceTree = "<group>"; };
+		6EBA86BBEA0F510322D602E93A019725 /* BetterSegmentedControl.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = BetterSegmentedControl.release.xcconfig; sourceTree = "<group>"; };
 		765E14BAD93A3B17D71C8195F820ED34 /* Pods-Kitchens Little Helper-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Kitchens Little Helper-acknowledgements.plist"; sourceTree = "<group>"; };
+		7A0A5818DCF6A47F12EDE5FCEE4989F8 /* BetterSegmentedControl-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "BetterSegmentedControl-dummy.m"; sourceTree = "<group>"; };
 		7A1F044EBEDA03192553318934D2D8D6 /* Pods-Kitchens Little Helper.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Kitchens Little Helper.debug.xcconfig"; sourceTree = "<group>"; };
-		8220CACA8D62B0EF83003025E1CF8DF5 /* SwiftyMenuBar.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SwiftyMenuBar.release.xcconfig; sourceTree = "<group>"; };
-		853044AF7AEDB556FAAD046ADD552282 /* MenuBarConfigurations.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = MenuBarConfigurations.swift; path = SwiftyMenuBar/Classes/MenuBarConfigurations.swift; sourceTree = "<group>"; };
-		853E43D2A98B9E91EC3DA72513A12546 /* MenuBarCell.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = MenuBarCell.swift; path = SwiftyMenuBar/Classes/MenuBarCell.swift; sourceTree = "<group>"; };
+		803CE1AD406D4E3B8D5A5D64A6FC9AAF /* BetterSegmentedControl+UIPointerInteractionDelegate.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "BetterSegmentedControl+UIPointerInteractionDelegate.swift"; path = "Pod/Classes/BetterSegmentedControl+UIPointerInteractionDelegate.swift"; sourceTree = "<group>"; };
+		816E764D884785B70AC9BACB3226E9A0 /* BetterSegmentedControl-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "BetterSegmentedControl-Info.plist"; sourceTree = "<group>"; };
 		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		A44031301980CD52A0DB452CEB330D9A /* MenuBar.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = MenuBar.swift; path = SwiftyMenuBar/Classes/MenuBar.swift; sourceTree = "<group>"; };
 		A4B1249FA0636D6C7625165F396097B1 /* Pods-Kitchens Little Helper-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Kitchens Little Helper-frameworks.sh"; sourceTree = "<group>"; };
+		AB6024A0FFCC85FE65AB8DE7B12613FF /* IconSegment.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = IconSegment.swift; path = Pod/Classes/Segments/IconSegment.swift; sourceTree = "<group>"; };
+		AD639F056194D9D593AFF0990A394227 /* BetterSegmentedControl+IndicatorView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "BetterSegmentedControl+IndicatorView.swift"; path = "Pod/Classes/BetterSegmentedControl+IndicatorView.swift"; sourceTree = "<group>"; };
+		B1AD53D6403ECA7F348AAD215DCABB3F /* BetterSegmentedControl.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = BetterSegmentedControl.debug.xcconfig; sourceTree = "<group>"; };
+		B2493A7EF93D7D989B70052766172152 /* AnimatableReload-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "AnimatableReload-prefix.pch"; sourceTree = "<group>"; };
+		B2F17CF755CC05DCA77E20E0D9C069A5 /* LabelSegment.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = LabelSegment.swift; path = Pod/Classes/Segments/LabelSegment.swift; sourceTree = "<group>"; };
+		C556F716B8AE917A7FD4D0E49DBEBD4D /* BetterSegmentedControl+Options.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "BetterSegmentedControl+Options.swift"; path = "Pod/Classes/BetterSegmentedControl+Options.swift"; sourceTree = "<group>"; };
 		CAD59FE3A3B25C9B97AB025F54805F81 /* Pods-Kitchens Little Helper.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-Kitchens Little Helper.modulemap"; sourceTree = "<group>"; };
 		CDE48EFB2C8A4B3D2E0DB2A798EFDF10 /* Pods_Kitchens_Little_Helper.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_Kitchens_Little_Helper.framework; path = "Pods-Kitchens Little Helper.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D245E0514AAC1A2B9A6D5EA2F383E90F /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.0.sdk/System/Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
-		D91A7F1D72C75D184B4C4ACA353811B1 /* SwiftyMenuBar-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SwiftyMenuBar-prefix.pch"; sourceTree = "<group>"; };
+		D4FC46C98198E356D61F2D5440C5CFA9 /* AnimatableReload.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = AnimatableReload.modulemap; sourceTree = "<group>"; };
 		EAB6F611E86A4758835A715E4B4184F6 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
-		FAFCD68316F7F66C5CBBC77C8534B422 /* SwiftyMenuBar.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = SwiftyMenuBar.framework; path = SwiftyMenuBar.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		EE3F81A6FFDA34B94EC9DDEAC9B623EE /* BetterSegmentedControl.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = BetterSegmentedControl.swift; path = Pod/Classes/BetterSegmentedControl.swift; sourceTree = "<group>"; };
+		FA0F12D05C570F77D6F149880AF14303 /* AnimatableReload-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "AnimatableReload-umbrella.h"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		7C08E9363F605E38B8EA3AFFCB5DB217 /* Frameworks */ = {
+		38E84A8F2DFF12617F56A4DD49EEDFCE /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1C072F45B5A1DD092B5479F34E18CAA1 /* Foundation.framework in Frameworks */,
-				291630109F357601077C4CCED91D9FB8 /* UIKit.framework in Frameworks */,
+				ACF3054A4868B3161B3DBB9FE58EEAA4 /* Foundation.framework in Frameworks */,
+				EFE58C980B925E50CDF098465E7DCE6E /* UIKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		8DC55DF7458196669AF298FD22F399C0 /* Frameworks */ = {
+		8876174F2CC082F66BED0BD49D9B7725 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4B25554ABC49486AF66DEF37EE377162 /* Foundation.framework in Frameworks */,
+				658E64A307DA4636F0619CFA8211D389 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D0E6B68009A930C97C1B5B9903F16640 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				03F79508D8D217B8CE96A031C12519A1 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -106,15 +146,6 @@
 			path = "Target Support Files/Pods-Kitchens Little Helper";
 			sourceTree = "<group>";
 		};
-		14B0610D6FD026F6F9B7327584E386A5 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				CDE48EFB2C8A4B3D2E0DB2A798EFDF10 /* Pods_Kitchens_Little_Helper.framework */,
-				FAFCD68316F7F66C5CBBC77C8534B422 /* SwiftyMenuBar.framework */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
 		1628BF05B4CAFDCC3549A101F5A10A17 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -123,12 +154,49 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		5590A6544DD0EE82C83204CC103F8E9D /* Pods */ = {
+		35B36C7BB910029DAB97E91B02ED1FE2 /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				73FAF9282C071125C2478A8E8B86F26B /* SwiftyMenuBar */,
+				D4FC46C98198E356D61F2D5440C5CFA9 /* AnimatableReload.modulemap */,
+				0CDEA11EB1133A631B44E273700ED242 /* AnimatableReload-dummy.m */,
+				32E8DB24A5B9745BF7CBE3D4E143385C /* AnimatableReload-Info.plist */,
+				B2493A7EF93D7D989B70052766172152 /* AnimatableReload-prefix.pch */,
+				FA0F12D05C570F77D6F149880AF14303 /* AnimatableReload-umbrella.h */,
+				3FEB10FDBBBF30DAD7096BBC8B6AB447 /* AnimatableReload.debug.xcconfig */,
+				2BCF24327824422F56BFE8DE0623B46F /* AnimatableReload.release.xcconfig */,
 			);
-			name = Pods;
+			name = "Support Files";
+			path = "../Target Support Files/AnimatableReload";
+			sourceTree = "<group>";
+		};
+		4E9947954D4F35FE88E83BE3FC8D8136 /* BetterSegmentedControl */ = {
+			isa = PBXGroup;
+			children = (
+				EE3F81A6FFDA34B94EC9DDEAC9B623EE /* BetterSegmentedControl.swift */,
+				33B8E98211CCEF00F4FD61E52C4A7D05 /* BetterSegmentedControl+IBDesignable.swift */,
+				AD639F056194D9D593AFF0990A394227 /* BetterSegmentedControl+IndicatorView.swift */,
+				C556F716B8AE917A7FD4D0E49DBEBD4D /* BetterSegmentedControl+Options.swift */,
+				072A8567B354889CB75D04DB48300570 /* BetterSegmentedControl+PredefinedStyles.swift */,
+				803CE1AD406D4E3B8D5A5D64A6FC9AAF /* BetterSegmentedControl+UIPointerInteractionDelegate.swift */,
+				263BC9AFB391E5F9C9859F2E370B0523 /* BetterSegmentedControlSegment.swift */,
+				AB6024A0FFCC85FE65AB8DE7B12613FF /* IconSegment.swift */,
+				B2F17CF755CC05DCA77E20E0D9C069A5 /* LabelSegment.swift */,
+				458086C118F17538F38861C4B1C1C3CA /* UIColor+Helpers.swift */,
+				04C8D3335E240F0D8B66069C784F32C3 /* UIView+Helpers.swift */,
+				E6F490E84B9D3F3B5C279FCE89BF1742 /* Support Files */,
+			);
+			name = BetterSegmentedControl;
+			path = BetterSegmentedControl;
+			sourceTree = "<group>";
+		};
+		557970F4CB7CF303D3B31E32A5D5B47F /* AnimatableReload */ = {
+			isa = PBXGroup;
+			children = (
+				427E247163FDA2C6940D908480010DC8 /* AnimatableReload.swift */,
+				35B36C7BB910029DAB97E91B02ED1FE2 /* Support Files */,
+			);
+			name = AnimatableReload;
+			path = AnimatableReload;
 			sourceTree = "<group>";
 		};
 		59DA5C1F72E1D5BABC43EACBA672C3BA /* iOS */ = {
@@ -140,33 +208,14 @@
 			name = iOS;
 			sourceTree = "<group>";
 		};
-		73FAF9282C071125C2478A8E8B86F26B /* SwiftyMenuBar */ = {
+		5C2C4DCFF8EF5A6607627A142AFB53AD /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				27FEC868D4D05E5BB22F074EC096C620 /* LayoutAnchors.swift */,
-				A44031301980CD52A0DB452CEB330D9A /* MenuBar.swift */,
-				853E43D2A98B9E91EC3DA72513A12546 /* MenuBarCell.swift */,
-				853044AF7AEDB556FAAD046ADD552282 /* MenuBarConfigurations.swift */,
-				03D280078170062325050426A59A54D0 /* MenuBarController.swift */,
-				A26BBA5F952422B859EBA72EC53AFEFE /* Support Files */,
+				2ECFC9C52546EB47EA04FB88FBFF55CC /* AnimatableReload.framework */,
+				0971B0AFD3BCBB672F48342DD0F5E060 /* BetterSegmentedControl.framework */,
+				CDE48EFB2C8A4B3D2E0DB2A798EFDF10 /* Pods_Kitchens_Little_Helper.framework */,
 			);
-			name = SwiftyMenuBar;
-			path = SwiftyMenuBar;
-			sourceTree = "<group>";
-		};
-		A26BBA5F952422B859EBA72EC53AFEFE /* Support Files */ = {
-			isa = PBXGroup;
-			children = (
-				6EC45A4E9F209403CD9D1B84111AAD83 /* SwiftyMenuBar.modulemap */,
-				4AF077DCF6457F17F8BF4A12E5D29294 /* SwiftyMenuBar-dummy.m */,
-				1CE79A64FE234F8CE6AFBE57B5EBA658 /* SwiftyMenuBar-Info.plist */,
-				D91A7F1D72C75D184B4C4ACA353811B1 /* SwiftyMenuBar-prefix.pch */,
-				301525913B87747EE01623CCD083C3F3 /* SwiftyMenuBar-umbrella.h */,
-				1B0382632B8A8DF844EC8757B7709D3A /* SwiftyMenuBar.debug.xcconfig */,
-				8220CACA8D62B0EF83003025E1CF8DF5 /* SwiftyMenuBar.release.xcconfig */,
-			);
-			name = "Support Files";
-			path = "../Target Support Files/SwiftyMenuBar";
+			name = Products;
 			sourceTree = "<group>";
 		};
 		CF1408CF629C7361332E53B88F7BD30C = {
@@ -174,69 +223,120 @@
 			children = (
 				9D940727FF8FB9C785EB98E56350EF41 /* Podfile */,
 				1628BF05B4CAFDCC3549A101F5A10A17 /* Frameworks */,
-				5590A6544DD0EE82C83204CC103F8E9D /* Pods */,
-				14B0610D6FD026F6F9B7327584E386A5 /* Products */,
+				EF6A2DAACA4021A688AFC34BA28DCFD1 /* Pods */,
+				5C2C4DCFF8EF5A6607627A142AFB53AD /* Products */,
 				0A9348EAEF6C5B0120E1DF13675526D9 /* Targets Support Files */,
 			);
+			sourceTree = "<group>";
+		};
+		E6F490E84B9D3F3B5C279FCE89BF1742 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				224DAD9939897B1B3C5571560855DE56 /* BetterSegmentedControl.modulemap */,
+				7A0A5818DCF6A47F12EDE5FCEE4989F8 /* BetterSegmentedControl-dummy.m */,
+				816E764D884785B70AC9BACB3226E9A0 /* BetterSegmentedControl-Info.plist */,
+				584BBB4E298AE37E2ABD362CE64C839E /* BetterSegmentedControl-prefix.pch */,
+				2EB15E00501A7FDD21878EB366D45A0F /* BetterSegmentedControl-umbrella.h */,
+				B1AD53D6403ECA7F348AAD215DCABB3F /* BetterSegmentedControl.debug.xcconfig */,
+				6EBA86BBEA0F510322D602E93A019725 /* BetterSegmentedControl.release.xcconfig */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/BetterSegmentedControl";
+			sourceTree = "<group>";
+		};
+		EF6A2DAACA4021A688AFC34BA28DCFD1 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				557970F4CB7CF303D3B31E32A5D5B47F /* AnimatableReload */,
+				4E9947954D4F35FE88E83BE3FC8D8136 /* BetterSegmentedControl */,
+			);
+			name = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
-		1F342797DF7C5FD6222F749D5A468F4A /* Headers */ = {
+		15226326882684083A337B544B6C93CA /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0927826DDADE17032C1DE27666580BB9 /* Pods-Kitchens Little Helper-umbrella.h in Headers */,
+				DE1571BEDE32685E5B22F71F1ABE02F2 /* BetterSegmentedControl-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		950D40DA62DAFBA4B13BCC1791073E33 /* Headers */ = {
+		2FBD49D06D29B594C6AF72A0DF03DDDC /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				64BB8187EC9BBECC6509F13DFF481783 /* SwiftyMenuBar-umbrella.h in Headers */,
+				C59D8B4CE0A5E8B9B419841ED6E5633D /* AnimatableReload-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		96E943ABE1F380DF5248E36DF8608CD7 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				18E0A647F4CA8CD849EDAAF88C55DB7C /* Pods-Kitchens Little Helper-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		1238B9DB06D12A06466D349CF61BAED5 /* SwiftyMenuBar */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 516E7B77305C70BEA4C6946A70E840B0 /* Build configuration list for PBXNativeTarget "SwiftyMenuBar" */;
-			buildPhases = (
-				950D40DA62DAFBA4B13BCC1791073E33 /* Headers */,
-				8075733B8FB564B032CD24975A9EFE2C /* Sources */,
-				7C08E9363F605E38B8EA3AFFCB5DB217 /* Frameworks */,
-				83D23408CDD5666085476A570AAD3687 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = SwiftyMenuBar;
-			productName = SwiftyMenuBar;
-			productReference = FAFCD68316F7F66C5CBBC77C8534B422 /* SwiftyMenuBar.framework */;
-			productType = "com.apple.product-type.framework";
-		};
 		9EFD8DDBAF218B98BFC91D15B4695ACE /* Pods-Kitchens Little Helper */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 11161BE715E5C2544A6698B9B1C9E54B /* Build configuration list for PBXNativeTarget "Pods-Kitchens Little Helper" */;
+			buildConfigurationList = 14BEE19FAB1630DEC4522E73251D1C0B /* Build configuration list for PBXNativeTarget "Pods-Kitchens Little Helper" */;
 			buildPhases = (
-				1F342797DF7C5FD6222F749D5A468F4A /* Headers */,
-				EA06506122DA242FF15705C9D21784DB /* Sources */,
-				8DC55DF7458196669AF298FD22F399C0 /* Frameworks */,
-				612F3494F37B8C6A2217361DE502F9FF /* Resources */,
+				96E943ABE1F380DF5248E36DF8608CD7 /* Headers */,
+				9533EA675D5103B21C9A8D88296657CE /* Sources */,
+				8876174F2CC082F66BED0BD49D9B7725 /* Frameworks */,
+				FCB0C149AD8D89E78C2205ABD1C231C8 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				E59DB4B4BB73FA169DB920EE448937B0 /* PBXTargetDependency */,
+				65D1AAC336B6CD1D8924205C5C5086A5 /* PBXTargetDependency */,
+				E49574F3262AD611A46C65D3CA70D4AC /* PBXTargetDependency */,
 			);
 			name = "Pods-Kitchens Little Helper";
 			productName = "Pods-Kitchens Little Helper";
 			productReference = CDE48EFB2C8A4B3D2E0DB2A798EFDF10 /* Pods_Kitchens_Little_Helper.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		E6F2C4BF4F14A0150EA8C977175C9A0D /* AnimatableReload */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D80D99C349CDDF7FB016EE40B654902E /* Build configuration list for PBXNativeTarget "AnimatableReload" */;
+			buildPhases = (
+				2FBD49D06D29B594C6AF72A0DF03DDDC /* Headers */,
+				FB806F2A0823C8167EF596EA150CFC65 /* Sources */,
+				D0E6B68009A930C97C1B5B9903F16640 /* Frameworks */,
+				C86F3A507BADF0B0707288603E844E1A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = AnimatableReload;
+			productName = AnimatableReload;
+			productReference = 2ECFC9C52546EB47EA04FB88FBFF55CC /* AnimatableReload.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		FFA0A1DD066506A523D6C9452B9CD06B /* BetterSegmentedControl */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 90AB7142C7889DB464E8A68B6C3990E2 /* Build configuration list for PBXNativeTarget "BetterSegmentedControl" */;
+			buildPhases = (
+				15226326882684083A337B544B6C93CA /* Headers */,
+				DA9FFDB2C4595D32AB3FBFE25FAFC77C /* Sources */,
+				38E84A8F2DFF12617F56A4DD49EEDFCE /* Frameworks */,
+				D8551DE1F63560DADB9DB48CC5028E26 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = BetterSegmentedControl;
+			productName = BetterSegmentedControl;
+			productReference = 0971B0AFD3BCBB672F48342DD0F5E060 /* BetterSegmentedControl.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 /* End PBXNativeTarget section */
@@ -257,25 +357,33 @@
 				Base,
 			);
 			mainGroup = CF1408CF629C7361332E53B88F7BD30C;
-			productRefGroup = 14B0610D6FD026F6F9B7327584E386A5 /* Products */;
+			productRefGroup = 5C2C4DCFF8EF5A6607627A142AFB53AD /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
+				E6F2C4BF4F14A0150EA8C977175C9A0D /* AnimatableReload */,
+				FFA0A1DD066506A523D6C9452B9CD06B /* BetterSegmentedControl */,
 				9EFD8DDBAF218B98BFC91D15B4695ACE /* Pods-Kitchens Little Helper */,
-				1238B9DB06D12A06466D349CF61BAED5 /* SwiftyMenuBar */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		612F3494F37B8C6A2217361DE502F9FF /* Resources */ = {
+		C86F3A507BADF0B0707288603E844E1A /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		83D23408CDD5666085476A570AAD3687 /* Resources */ = {
+		D8551DE1F63560DADB9DB48CC5028E26 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FCB0C149AD8D89E78C2205ABD1C231C8 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -285,75 +393,61 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		8075733B8FB564B032CD24975A9EFE2C /* Sources */ = {
+		9533EA675D5103B21C9A8D88296657CE /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				339DF44415E215FE1749B0F45EDE4CB2 /* LayoutAnchors.swift in Sources */,
-				79FE36D1C8226717456AE44480908995 /* MenuBar.swift in Sources */,
-				FDF3691FED86E1F8B3064A270072EEE5 /* MenuBarCell.swift in Sources */,
-				4A0DF7074EBF9800B3B1E9FFEF3110CB /* MenuBarConfigurations.swift in Sources */,
-				539DD26836048C87E4B9AACF7C056777 /* MenuBarController.swift in Sources */,
-				D2A3F04000D87EEA6640F439E68EC6ED /* SwiftyMenuBar-dummy.m in Sources */,
+				6E01E220C6A201626332018674B7F6E9 /* Pods-Kitchens Little Helper-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		EA06506122DA242FF15705C9D21784DB /* Sources */ = {
+		DA9FFDB2C4595D32AB3FBFE25FAFC77C /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F57865375207847E0221B4998562E9B1 /* Pods-Kitchens Little Helper-dummy.m in Sources */,
+				9A43C8C2D3011AAC543038A3C57927A3 /* BetterSegmentedControl+IBDesignable.swift in Sources */,
+				0AC3A362AC3E567A4D1D56AEE46CB12F /* BetterSegmentedControl+IndicatorView.swift in Sources */,
+				07B8968BD31271E7FC18D85921C2AC0F /* BetterSegmentedControl+Options.swift in Sources */,
+				F5450A7D2B901241180AA5C3768B5D1F /* BetterSegmentedControl+PredefinedStyles.swift in Sources */,
+				2AA8A25AD6181EC55EFEB2243CDC2C17 /* BetterSegmentedControl+UIPointerInteractionDelegate.swift in Sources */,
+				71EA36AE6524B7BBEDE1BDB7BE3B021B /* BetterSegmentedControl-dummy.m in Sources */,
+				6997891C4061A45CA95B6E960D31C491 /* BetterSegmentedControl.swift in Sources */,
+				CA418CAE44795383B11D3F002BC6FFC9 /* BetterSegmentedControlSegment.swift in Sources */,
+				A268632B3937A44826947456601E32BB /* IconSegment.swift in Sources */,
+				566E310657BDE3DC19F32D814E89F007 /* LabelSegment.swift in Sources */,
+				C7DEFB89A1384CACED536E39301F77E4 /* UIColor+Helpers.swift in Sources */,
+				649FF14F1BEDBCD9190ABFA52A2B5093 /* UIView+Helpers.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FB806F2A0823C8167EF596EA150CFC65 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				30856EB6C9B5883DAB648ED2AB35BCCE /* AnimatableReload-dummy.m in Sources */,
+				78B53A1F67EFA82F1BEC50EC0DF88568 /* AnimatableReload.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		E59DB4B4BB73FA169DB920EE448937B0 /* PBXTargetDependency */ = {
+		65D1AAC336B6CD1D8924205C5C5086A5 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			name = SwiftyMenuBar;
-			target = 1238B9DB06D12A06466D349CF61BAED5 /* SwiftyMenuBar */;
-			targetProxy = 588BD7A8E023F9D05FEED74C9F0ABECE /* PBXContainerItemProxy */;
+			name = AnimatableReload;
+			target = E6F2C4BF4F14A0150EA8C977175C9A0D /* AnimatableReload */;
+			targetProxy = EB91E91A484402A0FFA436506973BF57 /* PBXContainerItemProxy */;
+		};
+		E49574F3262AD611A46C65D3CA70D4AC /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = BetterSegmentedControl;
+			target = FFA0A1DD066506A523D6C9452B9CD06B /* BetterSegmentedControl */;
+			targetProxy = 521271B0EFF4CF4811564ACE9871A132 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
-		227372D346417680FA38B7609D82F30E /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 1B0382632B8A8DF844EC8757B7709D3A /* SwiftyMenuBar.debug.xcconfig */;
-			buildSettings = {
-				CLANG_ENABLE_OBJC_WEAK = NO;
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				GCC_PREFIX_HEADER = "Target Support Files/SwiftyMenuBar/SwiftyMenuBar-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/SwiftyMenuBar/SwiftyMenuBar-Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				MODULEMAP_FILE = "Target Support Files/SwiftyMenuBar/SwiftyMenuBar.modulemap";
-				PRODUCT_MODULE_NAME = SwiftyMenuBar;
-				PRODUCT_NAME = SwiftyMenuBar;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
-		7D0F8DBCE1E934F4A343005224E4E1DD /* Debug */ = {
+		0447DE3E1860F1B4C8D59BBABE97AAE2 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 7A1F044EBEDA03192553318934D2D8D6 /* Pods-Kitchens Little Helper.debug.xcconfig */;
 			buildSettings = {
@@ -389,6 +483,42 @@
 				VERSION_INFO_PREFIX = "";
 			};
 			name = Debug;
+		};
+		0AEDB965FE281EB72972506E0A4EACD0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2BCF24327824422F56BFE8DE0623B46F /* AnimatableReload.release.xcconfig */;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/AnimatableReload/AnimatableReload-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/AnimatableReload/AnimatableReload-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MODULEMAP_FILE = "Target Support Files/AnimatableReload/AnimatableReload.modulemap";
+				PRODUCT_MODULE_NAME = AnimatableReload;
+				PRODUCT_NAME = AnimatableReload;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
 		};
 		7EE7A78859F657F6BEFC651185B43192 /* Release */ = {
 			isa = XCBuildConfiguration;
@@ -452,9 +582,9 @@
 			};
 			name = Release;
 		};
-		AB3E20069B431241E247C6B5C4503841 /* Release */ = {
+		89B71CE2FA0BE9CE98D2892AE6ADF209 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 8220CACA8D62B0EF83003025E1CF8DF5 /* SwiftyMenuBar.release.xcconfig */;
+			baseConfigurationReference = 3FEB10FDBBBF30DAD7096BBC8B6AB447 /* AnimatableReload.debug.xcconfig */;
 			buildSettings = {
 				CLANG_ENABLE_OBJC_WEAK = NO;
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
@@ -465,8 +595,8 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				GCC_PREFIX_HEADER = "Target Support Files/SwiftyMenuBar/SwiftyMenuBar-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/SwiftyMenuBar/SwiftyMenuBar-Info.plist";
+				GCC_PREFIX_HEADER = "Target Support Files/AnimatableReload/AnimatableReload-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/AnimatableReload/AnimatableReload-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -474,19 +604,52 @@
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				MODULEMAP_FILE = "Target Support Files/SwiftyMenuBar/SwiftyMenuBar.modulemap";
-				PRODUCT_MODULE_NAME = SwiftyMenuBar;
-				PRODUCT_NAME = SwiftyMenuBar;
+				MODULEMAP_FILE = "Target Support Files/AnimatableReload/AnimatableReload.modulemap";
+				PRODUCT_MODULE_NAME = AnimatableReload;
+				PRODUCT_NAME = AnimatableReload;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
 			};
-			name = Release;
+			name = Debug;
+		};
+		CAF069CE43935BB11201FF0022FBAC97 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = B1AD53D6403ECA7F348AAD215DCABB3F /* BetterSegmentedControl.debug.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/BetterSegmentedControl/BetterSegmentedControl-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/BetterSegmentedControl/BetterSegmentedControl-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MODULEMAP_FILE = "Target Support Files/BetterSegmentedControl/BetterSegmentedControl.modulemap";
+				PRODUCT_MODULE_NAME = BetterSegmentedControl;
+				PRODUCT_NAME = BetterSegmentedControl;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 5.1;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
 		};
 		D299434AB35E7FD6F7921C8EF24742FF /* Debug */ = {
 			isa = XCBuildConfiguration;
@@ -554,7 +717,7 @@
 			};
 			name = Debug;
 		};
-		DC542FF6C027812AC341306B61815CA3 /* Release */ = {
+		D2D234F189073B58173FBC6FAC51699E /* Release */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 0178BEA89F82D94FC5DCEBED6FA5FF6A /* Pods-Kitchens Little Helper.release.xcconfig */;
 			buildSettings = {
@@ -592,14 +755,49 @@
 			};
 			name = Release;
 		};
+		EFFBB83AC4AD93D2D2F30ADF073E529C /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6EBA86BBEA0F510322D602E93A019725 /* BetterSegmentedControl.release.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/BetterSegmentedControl/BetterSegmentedControl-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/BetterSegmentedControl/BetterSegmentedControl-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MODULEMAP_FILE = "Target Support Files/BetterSegmentedControl/BetterSegmentedControl.modulemap";
+				PRODUCT_MODULE_NAME = BetterSegmentedControl;
+				PRODUCT_NAME = BetterSegmentedControl;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 5.1;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		11161BE715E5C2544A6698B9B1C9E54B /* Build configuration list for PBXNativeTarget "Pods-Kitchens Little Helper" */ = {
+		14BEE19FAB1630DEC4522E73251D1C0B /* Build configuration list for PBXNativeTarget "Pods-Kitchens Little Helper" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				7D0F8DBCE1E934F4A343005224E4E1DD /* Debug */,
-				DC542FF6C027812AC341306B61815CA3 /* Release */,
+				0447DE3E1860F1B4C8D59BBABE97AAE2 /* Debug */,
+				D2D234F189073B58173FBC6FAC51699E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -613,11 +811,20 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		516E7B77305C70BEA4C6946A70E840B0 /* Build configuration list for PBXNativeTarget "SwiftyMenuBar" */ = {
+		90AB7142C7889DB464E8A68B6C3990E2 /* Build configuration list for PBXNativeTarget "BetterSegmentedControl" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				227372D346417680FA38B7609D82F30E /* Debug */,
-				AB3E20069B431241E247C6B5C4503841 /* Release */,
+				CAF069CE43935BB11201FF0022FBAC97 /* Debug */,
+				EFFBB83AC4AD93D2D2F30ADF073E529C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D80D99C349CDDF7FB016EE40B654902E /* Build configuration list for PBXNativeTarget "AnimatableReload" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				89B71CE2FA0BE9CE98D2892AE6ADF209 /* Debug */,
+				0AEDB965FE281EB72972506E0A4EACD0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
