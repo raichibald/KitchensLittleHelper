@@ -123,7 +123,7 @@ class RootViewController: UIViewController, CustomPageViewControlIndexDelegate, 
         }
         
         print(";;;;; \(unitQuant)")
-        converterManager.convertUnits(value: unitQuant, unitOne: unitOne, unitTwo: unitTwo)
+        
         
         performSegue(withIdentifier: "goToResults", sender: self)
         

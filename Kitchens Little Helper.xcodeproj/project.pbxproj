@@ -14,6 +14,9 @@
 		B30BB087261E173B008E88D8 /* Converter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B30BB086261E173B008E88D8 /* Converter.swift */; };
 		B30BB08B261E1765008E88D8 /* ConverterManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B30BB08A261E1765008E88D8 /* ConverterManager.swift */; };
 		B30BB08E261E2426008E88D8 /* Protocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = B30BB08D261E2426008E88D8 /* Protocols.swift */; };
+		B319B0E82627298E00027195 /* SavedConversionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B319B0E62627298E00027195 /* SavedConversionsViewController.swift */; };
+		B319B0EE26272AD800027195 /* ConversionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B319B0EC26272AD800027195 /* ConversionCell.swift */; };
+		B319B0EF26272AD800027195 /* ConversionCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B319B0ED26272AD800027195 /* ConversionCell.xib */; };
 		B319D470260DE0EC00245F3A /* SwitchButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = B319D46F260DE0EC00245F3A /* SwitchButton.swift */; };
 		B319D473260E257200245F3A /* ConvertButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = B319D472260E257200245F3A /* ConvertButton.swift */; };
 		B31DCC5C2600AB9600F7F1EB /* DryIngredientsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B31DCC5B2600AB9600F7F1EB /* DryIngredientsViewController.swift */; };
@@ -42,6 +45,9 @@
 		B30BB086261E173B008E88D8 /* Converter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Converter.swift; sourceTree = "<group>"; };
 		B30BB08A261E1765008E88D8 /* ConverterManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConverterManager.swift; sourceTree = "<group>"; };
 		B30BB08D261E2426008E88D8 /* Protocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Protocols.swift; sourceTree = "<group>"; };
+		B319B0E62627298E00027195 /* SavedConversionsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavedConversionsViewController.swift; sourceTree = "<group>"; };
+		B319B0EC26272AD800027195 /* ConversionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConversionCell.swift; sourceTree = "<group>"; };
+		B319B0ED26272AD800027195 /* ConversionCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ConversionCell.xib; sourceTree = "<group>"; };
 		B319D46F260DE0EC00245F3A /* SwitchButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwitchButton.swift; sourceTree = "<group>"; };
 		B319D472260E257200245F3A /* ConvertButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConvertButton.swift; sourceTree = "<group>"; };
 		B31DCC5B2600AB9600F7F1EB /* DryIngredientsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DryIngredientsViewController.swift; sourceTree = "<group>"; };
@@ -89,9 +95,56 @@
 			isa = PBXGroup;
 			children = (
 				B36BB1652600949800C21EF6 /* Assets.xcassets */,
+				B39A2E362615CEFF00D4954B /* UITextField.swift */,
 				B30716C22608C6E600D0AA87 /* CustomSegmentedControl.swift */,
+				B30A17EB260C9E9A0049E1D0 /* UnitView.swift */,
+				B319D46F260DE0EC00245F3A /* SwitchButton.swift */,
+				B393BB852604D76A00783EA1 /* CustomPageViewController.swift */,
+				B319D472260E257200245F3A /* ConvertButton.swift */,
 			);
 			path = Resources;
+			sourceTree = "<group>";
+		};
+		B319B0DD26271C7E00027195 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				B30A17EE260CC8AD0049E1D0 /* UnitCollectionViewCell.swift */,
+				B3C9E893260A19B80063FC0D /* Main.storyboard */,
+				B319B0EC26272AD800027195 /* ConversionCell.swift */,
+				B319B0ED26272AD800027195 /* ConversionCell.xib */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		B319B0E026271D3500027195 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				B30BB08A261E1765008E88D8 /* ConverterManager.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		B319B0E126271D4700027195 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				B30BB086261E173B008E88D8 /* Converter.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		B319B0E426271EF800027195 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				B36BB1602600949700C21EF6 /* RootViewController.swift */,
+				B3E495A2261DDA8800CD6EAF /* ResultViewController.swift */,
+				B31DCC5B2600AB9600F7F1EB /* DryIngredientsViewController.swift */,
+				B39A2E392615D39000D4954B /* UIViewController.swift */,
+				B31DCC5E2600ABAA00F7F1EB /* WetIngredientsViewController.swift */,
+				B31DCC612600ABC200F7F1EB /* PanViewController.swift */,
+				B319B0E62627298E00027195 /* SavedConversionsViewController.swift */,
+				B31DCC642600ABD000F7F1EB /* OvenViewController.swift */,
+			);
+			path = Controllers;
 			sourceTree = "<group>";
 		};
 		B36BB1502600949600C21EF6 = {
@@ -116,28 +169,16 @@
 			isa = PBXGroup;
 			children = (
 				B36BB15C2600949700C21EF6 /* AppDelegate.swift */,
-				B30BB086261E173B008E88D8 /* Converter.swift */,
-				B30BB08A261E1765008E88D8 /* ConverterManager.swift */,
+				B319B0E126271D4700027195 /* Model */,
+				B319B0E026271D3500027195 /* ViewModel */,
 				B36BB15E2600949700C21EF6 /* SceneDelegate.swift */,
-				B36BB1602600949700C21EF6 /* RootViewController.swift */,
-				B3E495A2261DDA8800CD6EAF /* ResultViewController.swift */,
-				B31DCC5B2600AB9600F7F1EB /* DryIngredientsViewController.swift */,
+				B319B0E426271EF800027195 /* Controllers */,
 				B30BB08D261E2426008E88D8 /* Protocols.swift */,
-				B39A2E362615CEFF00D4954B /* UITextField.swift */,
-				B39A2E392615D39000D4954B /* UIViewController.swift */,
-				B31DCC5E2600ABAA00F7F1EB /* WetIngredientsViewController.swift */,
-				B30A17EE260CC8AD0049E1D0 /* UnitCollectionViewCell.swift */,
-				B31DCC612600ABC200F7F1EB /* PanViewController.swift */,
-				B31DCC642600ABD000F7F1EB /* OvenViewController.swift */,
 				B30716C12608C6C400D0AA87 /* Resources */,
 				B36BB1672600949800C21EF6 /* LaunchScreen.storyboard */,
 				B36BB16A2600949800C21EF6 /* Info.plist */,
 				B393BB822604D61100783EA1 /* ConversionViewController.swift */,
-				B393BB852604D76A00783EA1 /* CustomPageViewController.swift */,
-				B3C9E893260A19B80063FC0D /* Main.storyboard */,
-				B30A17EB260C9E9A0049E1D0 /* UnitView.swift */,
-				B319D46F260DE0EC00245F3A /* SwitchButton.swift */,
-				B319D472260E257200245F3A /* ConvertButton.swift */,
+				B319B0DD26271C7E00027195 /* Views */,
 			);
 			path = "Kitchens Little Helper";
 			sourceTree = "<group>";
@@ -210,6 +251,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B3C9E894260A19B80063FC0D /* Main.storyboard in Resources */,
+				B319B0EF26272AD800027195 /* ConversionCell.xib in Resources */,
 				B36BB1692600949800C21EF6 /* LaunchScreen.storyboard in Resources */,
 				B36BB1662600949800C21EF6 /* Assets.xcassets in Resources */,
 			);
@@ -274,10 +316,12 @@
 				B31DCC5C2600AB9600F7F1EB /* DryIngredientsViewController.swift in Sources */,
 				B30A17EF260CC8AD0049E1D0 /* UnitCollectionViewCell.swift in Sources */,
 				B3E495A3261DDA8800CD6EAF /* ResultViewController.swift in Sources */,
+				B319B0E82627298E00027195 /* SavedConversionsViewController.swift in Sources */,
 				B36BB15D2600949700C21EF6 /* AppDelegate.swift in Sources */,
 				B319D473260E257200245F3A /* ConvertButton.swift in Sources */,
 				B30A17EC260C9E9A0049E1D0 /* UnitView.swift in Sources */,
 				B39A2E372615CEFF00D4954B /* UITextField.swift in Sources */,
+				B319B0EE26272AD800027195 /* ConversionCell.swift in Sources */,
 				B393BB832604D61100783EA1 /* ConversionViewController.swift in Sources */,
 				B30BB08E261E2426008E88D8 /* Protocols.swift in Sources */,
 				B30BB08B261E1765008E88D8 /* ConverterManager.swift in Sources */,

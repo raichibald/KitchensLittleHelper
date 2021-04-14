@@ -6,5 +6,8 @@
 //
 
 struct Converter {
-    var value: Double
+    var fromValue: Double
+    var fromUnit: String
+    var toUnit: String
+    var result: Double
 }

@@ -17,6 +17,7 @@ class DryIngredientsViewController: UIViewController {
     
     var quantTextField = UITextField()
     var switchButton = SwitchButton()
+    var convertButton = ConvertButton()
     
     private let unitCellWidth: CGFloat = 85
     private let unitCellHeight: CGFloat = 108
@@ -36,6 +37,12 @@ class DryIngredientsViewController: UIViewController {
     
     weak var conversionDelegate: ConversionDelegate?
     
+    var converterManager = ConverterManager()
+    
+    var unitOneText: String?
+    var unitTwoText: String?
+    
+    var initialUnitLabel: String?
     
     //Setting UICollectionView to a function that returns itself
     fileprivate let unitCollectionViewOne: UICollectionView = {
@@ -96,6 +103,7 @@ class DryIngredientsViewController: UIViewController {
         
         configureQuantTextField()
         configureUnitCollectionView()
+        configureConvertButton()
         
         unitCollectionViewOne.selectItem(at: selectedIndexPathOne, animated: false, scrollPosition: .left)
         unitCollectionViewTwo.selectItem(at: selectedIndexPathTwo, animated: false, scrollPosition: .left)
@@ -159,6 +167,7 @@ class DryIngredientsViewController: UIViewController {
         view.addSubview(quantTextField)
 //        quantTextField.placeholder = "10"
         quantTextField.keyboardType = .decimalPad
+        
         quantTextField.text = "10"
         quantTextField.font = UIFont.boldSystemFont(ofSize: 80)
         quantTextField.textAlignment = .center
@@ -188,6 +197,78 @@ class DryIngredientsViewController: UIViewController {
         
         setSwitchButtonConstraints()
         
+    }
+    
+    func configureConvertButton() {
+        convertButton.setTitle("CONVERT", for: .normal)
+        view.addSubview(convertButton)
+        
+        //Target
+        convertButton.addTarget(self, action: #selector(convertButtonReleased), for: .touchUpInside)
+        
+        convertButton.addTarget(self, action: #selector(convertButtonTapped), for: .touchDown)
+        
+        convertButton.addTarget(self, action: #selector(convertButtonCancelled), for: .touchDragExit)
+        
+        //Constraints
+        setConvertButtonConstraints()
+    }
+    
+    @objc func convertButtonReleased(_ sender: UIButton) {
+        DispatchQueue.main.async {
+            UIView.animate(withDuration: 0.3) {
+                sender.setTitleColor(UIColor(named: "warmRed"), for: .normal)
+                sender.backgroundColor = UIColor(named: "darkWhite")
+            }
+        }
+    }
+    
+    @objc func convertButtonTapped(_ sender: UIButton) {
+        if let quantText = quantTextField.text, let unitOne = unitOneText, let unitTwo = unitTwoText {
+            
+            
+            print(quantText)
+            
+            let currentValue = (quantText.replacingOccurrences(of: ",", with: ".") as NSString).doubleValue
+            print(currentValue)
+            converterManager.convertUnits(value: currentValue, unitOne: unitOne, unitTwo: unitTwo)
+            
+            
+            
+            print("currentValue \(Double(currentValue))")
+            print(unitOne)
+            print(unitTwo)
+        }
+        
+        
+        performSegue(withIdentifier: "goToResults", sender: self)
+        
+        DispatchQueue.main.async {
+            UIView.animate(withDuration: 0.3) {
+                sender.setTitleColor(UIColor(named: "darkWhite"), for: .normal)
+                sender.backgroundColor = UIColor(named: "warmRed")
+            }
+        }
+    }
+    
+    @objc func convertButtonCancelled(_ sender: UIButton) {
+        DispatchQueue.main.async {
+            UIView.animate(withDuration: 0.3) {
+                
+                
+                sender.setTitleColor(UIColor(named: "warmRed"), for: .normal)
+                sender.backgroundColor = UIColor(named: "darkWhite")
+            }
+            
+        }
+    }
+    
+    func setConvertButtonConstraints() {
+        convertButton.translatesAutoresizingMaskIntoConstraints = false
+        convertButton.topAnchor.constraint(equalTo: unitCollectionViewTwo.bottomAnchor, constant: 30).isActive = true
+        convertButton.centerXAnchor.constraint(equalTo: view.safeAreaLayoutGuide.centerXAnchor).isActive = true
+        convertButton.widthAnchor.constraint(equalToConstant: 250).isActive = true
+        convertButton.heightAnchor.constraint(equalToConstant: 50).isActive = true
     }
     
     @objc func switchButtonTapped() {
@@ -242,6 +323,22 @@ class DryIngredientsViewController: UIViewController {
 ////        unitCollectionViewOne.reloadData()
 //        unitCollectionViewTwo.reloadData()
         //print(switchUnits)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
+        if segue.identifier == "goToResults" {
+            let resultViewController = segue.destination as! ResultViewController
+            //print(quantTextField.text)
+            
+            resultViewController.resultValue = converterManager.getConversionValue()
+            resultViewController.fromValue = converterManager.getFromValue()
+            resultViewController.fromUnit = converterManager.getUnitNameOf(converterManager.getFromUnit())
+            resultViewController.resultUnit = converterManager.getUnitNameOf(converterManager.getToUnit())
+            
+            
+            
+        }
     }
     
     override func viewDidLayoutSubviews() {
@@ -304,12 +401,24 @@ extension DryIngredientsViewController: UICollectionViewDelegateFlowLayout, UICo
         if collectionView == unitCollectionViewOne {
             let unitCell = collectionView.dequeueReusableCell(withReuseIdentifier: "unitCell", for: indexPath) as! UnitCollectionViewCell
             
+            
+            
             if !switchUnits {
                 unitCell.bigLabel.text = dataOne[indexPath.row]
+                
+                //Initial label
+                unitOneText = dataOne[selectedIndexPathOne.row]
             } else {
                 unitCell.bigLabel.text = dataTwo[indexPath.row]
                 
+                //Initial label
+                unitOneText = dataTwo[selectedIndexPathOne.row]
+                
             }
+            
+            
+            
+            
             
 //            if selectedIndexOne == indexPath.row {
 //                unitCell.backgroundColor = UIColor(named: "warmRed")
@@ -326,9 +435,19 @@ extension DryIngredientsViewController: UICollectionViewDelegateFlowLayout, UICo
             
             if switchUnits {
                 unitCell.bigLabel.text = dataOne[indexPath.row]
+                
+                //Initial label
+                unitTwoText = dataOne[selectedIndexPathTwo.row]
+                print(selectedIndexPathTwo)
             } else {
                 unitCell.bigLabel.text = dataTwo[indexPath.row]
+                
+                //Initial label
+                unitTwoText = dataTwo[selectedIndexPathTwo.row]
+                print(unitTwoText)
             }
+            
+            
             
 //            if selectedIndexTwo == indexPath.row {
 //                unitCell.backgroundColor = UIColor(named: "warmRed")
@@ -348,33 +467,37 @@ extension DryIngredientsViewController: UICollectionViewDelegateFlowLayout, UICo
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         
-        print("=========== \(indexPath)")
+        //print("=========== \(indexPath)")
         guard let unitQuant = quantTextField.text else { return }
         
         if collectionView == unitCollectionViewOne {
             selectedIndexPathOne = indexPath
             
             if !switchUnits {
-                
-                print(dataOne[indexPath.row])
+                unitOneText = dataOne[indexPath.row]
+                //print(dataOne[indexPath.row])
             } else {
-                print(dataTwo[indexPath.row])
+                //print(dataTwo[indexPath.row])
+                unitOneText = dataTwo[indexPath.row]
                 
             }
-            print("///// \(unitQuant)")
-            conversionDelegate?.converterSettingsWasSet(value: "900", unitOne: "ola", unitTwo: "zivs")
+            //print("///// \(unitQuant)")
+            //conversionDelegate?.converterSettingsWasSet(value: "900", unitOne: "ola", unitTwo: "zivs")
             
         } else if collectionView == unitCollectionViewTwo {
-            print(",,,,,,,,,,,,,,,")
+            //print(",,,,,,,,,,,,,,,")
             selectedIndexPathTwo = indexPath
             
+            
             if switchUnits {
-                print(dataOne[indexPath.row])
+                unitTwoText = dataOne[indexPath.row]
+                //print(dataOne[indexPath.row])
             } else {
-                print(dataTwo[indexPath.row])
+                unitTwoText = dataTwo[indexPath.row]
+                //print(dataTwo[indexPath.row])
                 
             }
-            conversionDelegate?.converterSettingsWasSet(value: unitQuant, unitOne: dataOne[indexPath.row], unitTwo: dataTwo[indexPath.row])
+            //conversionDelegate?.converterSettingsWasSet(value: unitQuant, unitOne: dataOne[indexPath.row], unitTwo: dataTwo[indexPath.row])
         }
         
         
@@ -442,6 +565,7 @@ extension DryIngredientsViewController: UITextFieldDelegate {
         
         if let comma = textField.text?.components(separatedBy: ",").count {
             if comma > 1 && string == "," {
+
                 return false
             }
             
