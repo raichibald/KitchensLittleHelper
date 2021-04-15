@@ -8,5 +8,6 @@ target 'Kitchens Little Helper' do
   # Pods for Kitchens Little Helper
 pod 'BetterSegmentedControl', '~> 2.0'
 pod 'AnimatableReload'
+pod 'RealmSwift'
 
 end

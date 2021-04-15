@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import RealmSwift
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -17,12 +18,25 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         //Customizing Tab Bar Appearance
         UITabBar.appearance().barTintColor = UIColor(named: "darkWhite")!
         UITabBar.appearance().tintColor = UIColor(named: "warmRed")!
-
         
-        //Customizing PageView indicators
-        let pageControl = UIPageControl.appearance()
-        pageControl.currentPageIndicatorTintColor = .black
-        pageControl.pageIndicatorTintColor = .lightGray
+        
+        print(Realm.Configuration.defaultConfiguration.fileURL)
+   
+        
+        do {
+            let realm = try Realm()
+  
+        } catch {
+            print("Error, could not initialise Realm")
+        }
+        
+        
+
+//
+//        //Customizing PageView indicators
+//        let pageControl = UIPageControl.appearance()
+//        pageControl.currentPageIndicatorTintColor = .black
+//        pageControl.pageIndicatorTintColor = .lightGray
         
     
         return true

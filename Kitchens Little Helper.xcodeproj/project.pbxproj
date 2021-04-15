@@ -32,6 +32,8 @@
 		B393BB862604D76A00783EA1 /* CustomPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B393BB852604D76A00783EA1 /* CustomPageViewController.swift */; };
 		B39A2E372615CEFF00D4954B /* UITextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = B39A2E362615CEFF00D4954B /* UITextField.swift */; };
 		B39A2E3A2615D39000D4954B /* UIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B39A2E392615D39000D4954B /* UIViewController.swift */; };
+		B3B8766F26282E180032BB52 /* Conversion.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3B8766E26282E180032BB52 /* Conversion.swift */; };
+		B3B87672262847870032BB52 /* UITableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3B87671262847870032BB52 /* UITableView.swift */; };
 		B3C9E894260A19B80063FC0D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B3C9E893260A19B80063FC0D /* Main.storyboard */; };
 		B3E495A3261DDA8800CD6EAF /* ResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3E495A2261DDA8800CD6EAF /* ResultViewController.swift */; };
 /* End PBXBuildFile section */
@@ -65,6 +67,8 @@
 		B393BB852604D76A00783EA1 /* CustomPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomPageViewController.swift; sourceTree = "<group>"; };
 		B39A2E362615CEFF00D4954B /* UITextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITextField.swift; sourceTree = "<group>"; };
 		B39A2E392615D39000D4954B /* UIViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewController.swift; sourceTree = "<group>"; };
+		B3B8766E26282E180032BB52 /* Conversion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Conversion.swift; sourceTree = "<group>"; };
+		B3B87671262847870032BB52 /* UITableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITableView.swift; sourceTree = "<group>"; };
 		B3C9E893260A19B80063FC0D /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		B3E495A2261DDA8800CD6EAF /* ResultViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultViewController.swift; sourceTree = "<group>"; };
 		FF2F9521CCA655C1C4336072 /* Pods-Kitchens Little Helper.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Kitchens Little Helper.release.xcconfig"; path = "Target Support Files/Pods-Kitchens Little Helper/Pods-Kitchens Little Helper.release.xcconfig"; sourceTree = "<group>"; };
@@ -96,6 +100,7 @@
 			children = (
 				B36BB1652600949800C21EF6 /* Assets.xcassets */,
 				B39A2E362615CEFF00D4954B /* UITextField.swift */,
+				B3B87671262847870032BB52 /* UITableView.swift */,
 				B30716C22608C6E600D0AA87 /* CustomSegmentedControl.swift */,
 				B30A17EB260C9E9A0049E1D0 /* UnitView.swift */,
 				B319D46F260DE0EC00245F3A /* SwitchButton.swift */,
@@ -128,6 +133,7 @@
 			isa = PBXGroup;
 			children = (
 				B30BB086261E173B008E88D8 /* Converter.swift */,
+				B3B8766E26282E180032BB52 /* Conversion.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -307,9 +313,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				B31DCC5F2600ABAA00F7F1EB /* WetIngredientsViewController.swift in Sources */,
+				B3B8766F26282E180032BB52 /* Conversion.swift in Sources */,
 				B36BB1612600949700C21EF6 /* RootViewController.swift in Sources */,
 				B319D470260DE0EC00245F3A /* SwitchButton.swift in Sources */,
 				B31DCC652600ABD000F7F1EB /* OvenViewController.swift in Sources */,
+				B3B87672262847870032BB52 /* UITableView.swift in Sources */,
 				B30BB087261E173B008E88D8 /* Converter.swift in Sources */,
 				B30716C32608C6E600D0AA87 /* CustomSegmentedControl.swift in Sources */,
 				B31DCC622600ABC200F7F1EB /* PanViewController.swift in Sources */,

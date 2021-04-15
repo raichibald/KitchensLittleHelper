@@ -8,8 +8,6 @@
 import UIKit
 import AnimatableReload
 
-
-
 class DryIngredientsViewController: UIViewController {
     
     var dataOne = ["oz", "lbs"]
@@ -187,6 +185,7 @@ class DryIngredientsViewController: UIViewController {
         
         //Target
         convertButton.addTarget(self, action: #selector(convertButtonReleased), for: .touchUpInside)
+        
         convertButton.addTarget(self, action: #selector(convertButtonTapped), for: .touchDown)
         convertButton.addTarget(self, action: #selector(convertButtonCancelled), for: .touchDragExit)
         
@@ -195,15 +194,6 @@ class DryIngredientsViewController: UIViewController {
     }
     
     @objc func convertButtonReleased(_ sender: UIButton) {
-        DispatchQueue.main.async {
-            UIView.animate(withDuration: 0.3) {
-                sender.setTitleColor(UIColor(named: "warmRed"), for: .normal)
-                sender.backgroundColor = UIColor(named: "darkWhite")
-            }
-        }
-    }
-    
-    @objc func convertButtonTapped(_ sender: UIButton) {
         if let quantText = quantTextField.text, let unitOne = unitOneText, let unitTwo = unitTwoText {
 
             let currentValue = (quantText.replacingOccurrences(of: ",", with: ".") as NSString).doubleValue
@@ -219,6 +209,15 @@ class DryIngredientsViewController: UIViewController {
         
         performSegue(withIdentifier: "goToResults", sender: self)
         
+        DispatchQueue.main.async {
+            UIView.animate(withDuration: 0.3) {
+                sender.setTitleColor(UIColor(named: "warmRed"), for: .normal)
+                sender.backgroundColor = UIColor(named: "darkWhite")
+            }
+        }
+    }
+    
+    @objc func convertButtonTapped(_ sender: UIButton) {
         DispatchQueue.main.async {
             UIView.animate(withDuration: 0.3) {
                 sender.setTitleColor(UIColor(named: "darkWhite"), for: .normal)

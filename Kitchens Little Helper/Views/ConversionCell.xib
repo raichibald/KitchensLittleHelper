@@ -24,7 +24,7 @@
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="bottom" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="Wfy-k1-nDb">
                                 <rect key="frame" x="207" y="15" width="53" height="50"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="10 G" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qSV-oT-2cC">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="10 G" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="qSV-oT-2cC">
                                         <rect key="frame" x="0.0" y="0.0" width="53" height="30"/>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="25"/>
                                         <color key="textColor" name="smokeWhite"/>
@@ -60,6 +60,7 @@
                             <constraint firstItem="Wfy-k1-nDb" firstAttribute="centerY" secondItem="7jf-oX-xUT" secondAttribute="centerY" id="6AO-WU-LRJ"/>
                             <constraint firstItem="DWi-o9-PXW" firstAttribute="centerY" secondItem="7jf-oX-xUT" secondAttribute="centerY" id="OfW-H2-Qr0"/>
                             <constraint firstAttribute="height" constant="80" id="Ygp-pV-coK"/>
+                            <constraint firstItem="Wfy-k1-nDb" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="DWi-o9-PXW" secondAttribute="trailing" constant="20" id="d3n-z2-E3o"/>
                             <constraint firstAttribute="trailing" secondItem="Wfy-k1-nDb" secondAttribute="trailing" constant="20" id="xiL-E9-mVM"/>
                         </constraints>
                     </view>

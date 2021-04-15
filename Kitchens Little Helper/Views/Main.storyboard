@@ -244,7 +244,7 @@
                             </tableView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="tsn-tN-dBm"/>
-                        <color key="backgroundColor" systemColor="systemIndigoColor"/>
+                        <color key="backgroundColor" name="smokeWhite"/>
                         <constraints>
                             <constraint firstItem="e6Q-bO-aOk" firstAttribute="bottom" secondItem="tsn-tN-dBm" secondAttribute="bottom" id="DQa-wn-NHR"/>
                             <constraint firstItem="e6Q-bO-aOk" firstAttribute="trailing" secondItem="tsn-tN-dBm" secondAttribute="trailing" id="I9b-mH-qi0"/>
@@ -282,13 +282,10 @@
     </scenes>
     <designables>
         <designable name="ady-BM-vlF">
-            <size key="intrinsicContentSize" width="96" height="30"/>
-        </designable>
-        <designable name="jBv-Wr-qiU">
-            <size key="intrinsicContentSize" width="195" height="32"/>
+            <size key="intrinsicContentSize" width="30" height="30"/>
         </designable>
         <designable name="sfS-vu-8Yk">
-            <size key="intrinsicContentSize" width="103" height="30"/>
+            <size key="intrinsicContentSize" width="30" height="30"/>
         </designable>
     </designables>
     <resources>

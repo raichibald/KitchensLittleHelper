@@ -1,20 +1,30 @@
 PODS:
   - AnimatableReload (0.2.0)
   - BetterSegmentedControl (2.0.1)
+  - Realm (10.6.0):
+    - Realm/Headers (= 10.6.0)
+  - Realm/Headers (10.6.0)
+  - RealmSwift (10.6.0):
+    - Realm (= 10.6.0)
 
 DEPENDENCIES:
   - AnimatableReload
   - BetterSegmentedControl (~> 2.0)
+  - RealmSwift
 
 SPEC REPOS:
   trunk:
     - AnimatableReload
     - BetterSegmentedControl
+    - Realm
+    - RealmSwift
 
 SPEC CHECKSUMS:
   AnimatableReload: 9576d3019bfb103f76b5f37fa6f8915bd8307527
   BetterSegmentedControl: 09607b27861d49cbce48b7673b74f9150a3d371a
+  Realm: 1ef421d4581513400ad4f8bd39c8157f3266c62e
+  RealmSwift: f80216fb8334b01ccf526e4f2dd5ff0da61863a2
 
-PODFILE CHECKSUM: 4b3291c7e2ee994bf2cce778fd97950d21b49fb9
+PODFILE CHECKSUM: fb7ead272f4eb8206a8327eba6707c5623ef40ea
 
 COCOAPODS: 1.10.1

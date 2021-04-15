@@ -1,6 +1,0 @@
-framework module Pods_Kitchens_Little_Helper {
-  umbrella header "Pods-Kitchens Little Helper-umbrella.h"
-
-  export *
-  module * { export * }
-}
