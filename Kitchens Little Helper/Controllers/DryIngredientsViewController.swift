@@ -177,12 +177,8 @@ class DryIngredientsViewController: UIViewController {
     
     func configureSwitchButton() {
         view.addSubview(switchButton)
-        
         switchButton.addTarget(self, action: #selector(switchButtonTapped), for: .touchUpInside)
-        
-        
         setSwitchButtonConstraints()
-        
     }
     
     func configureConvertButton() {
@@ -191,9 +187,7 @@ class DryIngredientsViewController: UIViewController {
         
         //Target
         convertButton.addTarget(self, action: #selector(convertButtonReleased), for: .touchUpInside)
-        
         convertButton.addTarget(self, action: #selector(convertButtonTapped), for: .touchDown)
-        
         convertButton.addTarget(self, action: #selector(convertButtonCancelled), for: .touchDragExit)
         
         //Constraints
@@ -211,16 +205,12 @@ class DryIngredientsViewController: UIViewController {
     
     @objc func convertButtonTapped(_ sender: UIButton) {
         if let quantText = quantTextField.text, let unitOne = unitOneText, let unitTwo = unitTwoText {
-            
-            
-            print(quantText)
-            
+
             let currentValue = (quantText.replacingOccurrences(of: ",", with: ".") as NSString).doubleValue
             print(currentValue)
             converterManager.convertUnits(value: currentValue, unitOne: unitOne, unitTwo: unitTwo)
             
-            
-            
+            //For debugging
             print("currentValue \(Double(currentValue))")
             print(unitOne)
             print(unitTwo)
@@ -258,11 +248,7 @@ class DryIngredientsViewController: UIViewController {
     }
     
     @objc func switchButtonTapped() {
-        
-        
-        
         switchUnits = !switchUnits
-        
         
         DispatchQueue.main.async {
             if self.switchUnits {
@@ -288,9 +274,10 @@ class DryIngredientsViewController: UIViewController {
                 AnimatableReload.reload(collectionView: self.unitCollectionViewOne, animationDirection: "right")
                 AnimatableReload.reload(collectionView: self.unitCollectionViewTwo, animationDirection: "left")
                 
-                //selecting previously selected cells on switch
-                self.unitCollectionViewOne.selectItem(at: self.selectedIndexPathTwo, animated: true, scrollPosition: .left)
-                self.unitCollectionViewTwo.selectItem(at: self.selectedIndexPathOne, animated: true, scrollPosition: .left)
+                
+                self.unitCollectionViewOne.selectItem(at: self.selectedIndexPathOne, animated: true, scrollPosition: .left)
+                self.unitCollectionViewTwo.selectItem(at: self.selectedIndexPathTwo, animated: true, scrollPosition: .left)
+                
             }
             
             
