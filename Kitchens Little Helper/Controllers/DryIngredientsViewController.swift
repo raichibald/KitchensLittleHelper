@@ -12,7 +12,7 @@ import AnimatableReload
 
 class DryIngredientsViewController: UIViewController {
     
-    var dataOne = ["oz", "lbs", "A"]
+    var dataOne = ["oz", "lbs"]
     var dataTwo = ["g", "kg"]
     
     var quantTextField = UITextField()
@@ -74,9 +74,7 @@ class DryIngredientsViewController: UIViewController {
         return cv
     }()
     
-//    override func reloadData() {
-//        super.reloadData()
-//    }
+
     override func viewWillAppear(_ animated: Bool) {
         //print("////////////")
 //        let selectedIndexPathOne = IndexPath(item: 0, section: 0)
@@ -113,12 +111,6 @@ class DryIngredientsViewController: UIViewController {
 
  
     }
-    
-//    override func viewDidAppear(_ animated: Bool) {
-//
-//        self.collectionView(unitCollectionViewOne, didSelectItemAt: IndexPath(index: 1))
-//        unitCollectionViewOne.selectItem(at: IndexPath(index: 1), animated: true, scrollPosition: [])
-//    }
 
     func configureUnitCollectionView() {
         view.addSubview(unitCollectionViewOne)
@@ -139,13 +131,7 @@ class DryIngredientsViewController: UIViewController {
         
         
     }
-    
-//    func configureUnitViewLabels() {
-//        let bigLabel = UILabel(frame: CGRect(x: 0, y: 0, width: 30, height: 20))
-//        bigLabel.text = "OOZ"
-//        unitCollectionViewOne.addSubview(bigLabel)
-//        
-//    }
+
 
     func setUnitCollectionViewOneConstraints() {
         unitCollectionViewOne.topAnchor.constraint(equalTo: quantTextField.bottomAnchor, constant: 20).isActive = true
@@ -309,20 +295,6 @@ class DryIngredientsViewController: UIViewController {
             
             
         }
-        
-//        UIView.transition(with: unitCollectionViewOne, duration: 0.5, options: ., animations: {
-//            self.unitCollectionViewOne.reloadData()
-//        }, completion: nil)
-        
-        if switchUnits {
-            
-        } else {
-           
-        }
-//        AnimatableReload.reload(collectionView: unitCollectionViewOne, animationDirection: "right")
-////        unitCollectionViewOne.reloadData()
-//        unitCollectionViewTwo.reloadData()
-        //print(switchUnits)
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -347,15 +319,11 @@ class DryIngredientsViewController: UIViewController {
         switchButton.layer.cornerRadius = switchButton.frame.size.width / 2
     }
     
-//    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-//        quantTextField.endEditing(true)
-//    }
-//
+
     func setSwitchButtonConstraints() {
         switchButton.translatesAutoresizingMaskIntoConstraints = false
         switchButton.topAnchor.constraint(equalTo: unitCollectionViewOne.bottomAnchor, constant: 10).isActive = true
         switchButton.centerXAnchor.constraint(equalTo: view.safeAreaLayoutGuide.centerXAnchor).isActive = true
-//        switchButton.bottomAnchor.constraint(equalTo: unitCollectionViewTwo.topAnchor, constant: 10).isActive = true
         switchButton.widthAnchor.constraint(equalToConstant: 60).isActive = true
         switchButton.heightAnchor.constraint(equalToConstant: 60).isActive = true
     }
@@ -384,7 +352,6 @@ extension DryIngredientsViewController: UICollectionViewDelegateFlowLayout, UICo
             } else {
                 return dataTwo.count
             }
-            //return dataTwo.count
         }
         
     }
@@ -392,11 +359,6 @@ extension DryIngredientsViewController: UICollectionViewDelegateFlowLayout, UICo
     
 
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        
-        
-//        let selectedIndexPathOne = IndexPath(item: 0, section: 0)
-//
-//        self.unitCollectionViewOne.selectItem(at: selectedIndexPathOne, animated: false, scrollPosition: .left)
         
         if collectionView == unitCollectionViewOne {
             let unitCell = collectionView.dequeueReusableCell(withReuseIdentifier: "unitCell", for: indexPath) as! UnitCollectionViewCell
@@ -417,18 +379,6 @@ extension DryIngredientsViewController: UICollectionViewDelegateFlowLayout, UICo
             }
             
             
-            
-            
-            
-//            if selectedIndexOne == indexPath.row {
-//                unitCell.backgroundColor = UIColor(named: "warmRed")
-//            } else {
-//                unitCell.backgroundColor = UIColor(named: "warmRed")?.withAlphaComponent(0.4)
-//            }
-            
-            
-            
-            
             return unitCell
         } else {
             let unitCell = collectionView.dequeueReusableCell(withReuseIdentifier: "unitCellTwo", for: indexPath) as! UnitCollectionViewCell
@@ -446,21 +396,9 @@ extension DryIngredientsViewController: UICollectionViewDelegateFlowLayout, UICo
                 unitTwoText = dataTwo[selectedIndexPathTwo.row]
                 print(unitTwoText)
             }
-            
-            
-            
-//            if selectedIndexTwo == indexPath.row {
-//                unitCell.backgroundColor = UIColor(named: "warmRed")
-//            } else {
-//                unitCell.backgroundColor = UIColor(named: "warmRed")?.withAlphaComponent(0.4)
-//            }
-            
-            
-            
+
             return unitCell
         }
-        
-        
 
     }
     
@@ -482,7 +420,6 @@ extension DryIngredientsViewController: UICollectionViewDelegateFlowLayout, UICo
                 
             }
             //print("///// \(unitQuant)")
-            //conversionDelegate?.converterSettingsWasSet(value: "900", unitOne: "ola", unitTwo: "zivs")
             
         } else if collectionView == unitCollectionViewTwo {
             //print(",,,,,,,,,,,,,,,")
@@ -497,20 +434,11 @@ extension DryIngredientsViewController: UICollectionViewDelegateFlowLayout, UICo
                 //print(dataTwo[indexPath.row])
                 
             }
-            //conversionDelegate?.converterSettingsWasSet(value: unitQuant, unitOne: dataOne[indexPath.row], unitTwo: dataTwo[indexPath.row])
         }
-        
-        
-        
-        
-        
-        
-        
     }
     
     func collectionView(_ collectionView: UICollectionView, didDeselectItemAt indexPath: IndexPath) {
         let selectedCell: UnitCollectionViewCell = collectionView.cellForItem(at: indexPath) as! UnitCollectionViewCell
-        //selectedCell.contentView.backgroundColor = .none
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
@@ -535,8 +463,6 @@ extension DryIngredientsViewController: UICollectionViewDelegateFlowLayout, UICo
         
     }
     
-    
-    
     func centerItemsInCollectionView(cellWidth: Double, numberOfItems: Double, spaceBetweenCell: Double, collectionView: UICollectionView) -> UIEdgeInsets {
             let totalWidth = cellWidth * numberOfItems
             let totalSpacingWidth = spaceBetweenCell * (numberOfItems - 1)
@@ -549,19 +475,12 @@ extension DryIngredientsViewController: UICollectionViewDelegateFlowLayout, UICo
             collectionView.isScrollEnabled = false
             return UIEdgeInsets(top: 0, left: leftInset, bottom: 0, right: rightInset)
         }
-    
-    
-
-
 }
 
 extension DryIngredientsViewController: UITextFieldDelegate {
 
     
     func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
-//        let allowedCharacters = CharacterSet.decimalDigits
-//        let characterSet = CharacterSet(charactersIn: string)
-//        return allowedCharacters.isSuperset(of: characterSet)
         
         if let comma = textField.text?.components(separatedBy: ",").count {
             if comma > 1 && string == "," {
@@ -574,22 +493,4 @@ extension DryIngredientsViewController: UITextFieldDelegate {
         return true
     }
     
-    
-    
 }
-
-
-
-
-
-
-
-
-
-    
-    
-    
-    
-    
-    
-

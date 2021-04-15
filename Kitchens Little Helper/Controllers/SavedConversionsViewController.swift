@@ -34,7 +34,7 @@ extension SavedConversionsViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "reusableConversionCell", for: indexPath) as! ConversionCell
         
-        cell.fromLabel.text = data[indexPath.row]
+        //cell.fromLabel.text = data[indexPath.row]
         
         
         return cell
